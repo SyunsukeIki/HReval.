@@ -1,6 +1,6 @@
 <template>
   <div calss="body">
-    <b-sidebar id="sidebar" title="MENU" shadow>
+    <b-sidebar id="sidebar" title="MENU" text-variant="light" shadow>
       <div class="px-3 py-2">
         <ol>
           <li><a href="#">通知内容</a></li>

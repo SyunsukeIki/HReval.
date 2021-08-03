@@ -1,5 +1,5 @@
 #sidebar {
-    background-color: #ebebeb!important;
+    background-color: #9AC4DB!important;
 }
 
 ol {
@@ -49,8 +49,6 @@ ol li:nth-child(4) {
 
 }
 
-
-// hover時
 ol li:first-child:hover {
     color: #fff;
     border-left: solid 6px #fcc203;/*左側の線*/
