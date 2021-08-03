@@ -1,0 +1,48 @@
+body {
+  width: 100%;
+  background-color: #abd7f5;
+}
+
+h2 {
+  color: #18c6cc;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+.form-box {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.form-group  {
+  margin: 1rem 0;
+}
+
+.form-control {
+  width: 230px;
+}
+
+button {
+  margin-top: 0.6rem;
+  margin-bottom: 2rem;
+}
+button:hover {
+  background-color: #094db3;
+}
+
+p {
+  margin-bottom: 0;
+}
+a:hover {
+  color: #000;
+}
