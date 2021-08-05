@@ -24,8 +24,8 @@
 <body>
     <div id="app"> 
         <my-header/>
-        @yield('content')
     </div>
+    @yield('content')
     <script src="{{ mix('js/app.js') }}"></script>   
 </body>
 </html>
