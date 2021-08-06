@@ -46,6 +46,7 @@
 .label-text{
   margin-left:10px;
   margin-right:30px;
+  color : #5f6368;
 }
 
 </style>
