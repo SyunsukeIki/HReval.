@@ -8,8 +8,14 @@
         <div class="content">
           <b-img src="/images/user.svg" width="100px"></b-img>
           <div class="shosai">
-            <p>評価者：ビズ　一郎（リーダー）、ビズ　次郎（課長）</p>
-            <p>状態：目標設定</p>
+            <div class="shosai-box1">
+              <b-badge pill variant="info">評価者</b-badge>
+              <div class="evaluator">
+                <p class="label-text">ビズ　一郎（リーダー）</p>
+                <p class="label-text">ビズ　次郎（課長）</p>
+              </div>
+            </div>
+            <b-badge pill variant="info">状態</b-badge><span class="state-text">目標設定</span>
           </div>
         </div>
       </b-card>
@@ -41,6 +47,7 @@
  
 .shosai {
   margin-left:20px;
+  flex-flow: column;
 }
 
 .label-text{
@@ -48,4 +55,13 @@
   margin-right:30px;
 }
 
+.evaluator{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.state-text {
+  margin-left:28px;
+  margin-right:30px;
+}
 </style>
