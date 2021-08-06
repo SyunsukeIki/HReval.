@@ -7,12 +7,11 @@
     <title>HReval</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'>
     <!-- Styles -->
     <style>
         body {
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
     </style>
 </head>
@@ -22,7 +21,6 @@
         <my-header/>
     </div>
     @yield('content')
-    @yield('nav')
     <script src="{{ mix('js/app.js') }}"></script>   
 </body>
 </html>

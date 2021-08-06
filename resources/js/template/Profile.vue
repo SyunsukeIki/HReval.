@@ -36,7 +36,7 @@
 
 <style>
 .sec1{
-  margin: 30px;
+  margin: 30px 0;
   border : thick double #32a1ce;
   padding: 10px;
 }
@@ -53,6 +53,7 @@
 .label-text{
   margin-left:10px;
   margin-right:30px;
+  color : #5f6368;
 }
 
 .evaluator{
