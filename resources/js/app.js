@@ -26,5 +26,8 @@ const content = new Vue({
   el: '#content',   
 })
 
+const nav = new Vue({
+  el: '#nav',   
+})
 
 

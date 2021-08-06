@@ -4,7 +4,13 @@
   <section>
     <div id="content" class="container-md">
       <profile />
-      <p>hello!</p>
+    </div>
+  </section>
+@endsection
+
+@section('nav')
+  <section>
+    <div id="nav" class="container-md">
       <nav_button />
     </div>
   </section>

@@ -22,6 +22,7 @@
         <my-header/>
     </div>
     @yield('content')
+    @yield('nav')
     <script src="{{ mix('js/app.js') }}"></script>   
 </body>
 </html>
