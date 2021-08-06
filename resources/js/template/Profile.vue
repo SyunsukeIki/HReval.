@@ -1,7 +1,8 @@
 <template>
   <div class="sec1">
     <b-button v-b-toggle.collapse-2 class="m-1" variant="primary">+</b-button>
-    <br>年度：令和3年度上期（2021/07/01~2021/11/31）<br>被評価者：ビズ　太郎
+    <b-badge pill variant="info">年度</b-badge><span class="label-text">令和3年度上期（2021/07/01~2021/11/31) </span>
+    <b-badge pill variant="info">被評価者</b-badge><span class="label-text">ビズ　太郎 </span>
     <b-collapse id="collapse-2" border="none">
       <b-card>
         <div class="content">
@@ -32,7 +33,6 @@
   margin: 30px;
   border : thick double #32a1ce;
   padding: 10px;
-  width: 80rem;
 }
 
  .content {
@@ -41,6 +41,11 @@
  
 .shosai {
   margin-left:20px;
+}
+
+.label-text{
+  margin-left:10px;
+  margin-right:30px;
 }
 
 </style>
