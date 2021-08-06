@@ -15,10 +15,19 @@ Vue.use(IconsPlugin)
 Vue.component('my-header', require('./template/Header.vue').default);
 Vue.component('my-button', require('./template/Button.vue').default);
 Vue.component('sidebar', require('./template/Sidebar.vue').default);
+Vue.component('profile', require('./template/Profile.vue').default);
+Vue.component('navbutton', require('./template/Nav_Button.vue').default);
 
 const app = new Vue({
-    el: '#app',
-  })
+    el: '#app',   
+})
 
+const content = new Vue({
+  el: '#content',   
+})
+
+const nav = new Vue({
+  el: '#nav',   
+})
 
 
