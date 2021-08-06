@@ -30,7 +30,7 @@
 
 <style>
 .sec1{
-  margin: 30px;
+  margin: 30px 0;
   border : thick double #32a1ce;
   padding: 10px;
 }
