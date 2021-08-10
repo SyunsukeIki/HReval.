@@ -1,0 +1,30 @@
+<template>
+　　<div class="work-log">
+      <b-table striped hover :items="items" caption-top>
+        <template #table-caption>Work Log.</template>
+      </b-table>
+    </div>
+</template>
+
+<script>
+  export default {
+    name: 'worklog',
+    data() {
+      return {
+        items: [
+          { age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
+          { age: 21, first_name: 'Larsen', last_name: 'Shaw' },
+          { age: 89, first_name: 'Geneva', last_name: 'Wilson' },
+          { age: 38, first_name: 'Jami', last_name: 'Carney' }
+        ]
+      }
+    }
+  }
+
+</script>
+
+<style>
+.work-log{
+  margin-top:15px
+}
+</style>

@@ -17,6 +17,7 @@ Vue.component('my-button', require('./template/Button.vue').default);
 Vue.component('sidebar', require('./template/Sidebar.vue').default);
 Vue.component('profile', require('./template/Profile.vue').default);
 Vue.component('nav_button', require('./template/Nav_Button.vue').default);
+Vue.component('worklog', require('./template/Worklog.vue').default);
 
 const app = new Vue({
     el: '#app',   
@@ -30,4 +31,6 @@ const nav = new Vue({
   el: '#nav',   
 })
 
-
+const sheet_content = new Vue({
+  el: '#sheet-content',   
+})
