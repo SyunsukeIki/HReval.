@@ -1,24 +1,46 @@
 <template>
-    <div>
-        <b-button variant="outline-secondary" class="nav-btn">目標</b-button>
-        <b-button variant="outline-secondary"class="nav-btn">目標方針</b-button>
-        <b-button variant="outline-secondary"class="nav-btn">中間面談</b-button>
-        <b-button variant="outline-secondary"class="nav-btn">成果</b-button>
-        <b-button variant="outline-secondary"class="nav-btn">評価</b-button>
-        <b-button variant="outline-secondary"class="nav-btn">作業ログ</b-button>
+　　<div>
+      <div v-if="this.windowSize < 800">
+        <b-dropdown id="dropdown-1" text="目標" class="m-md-2">
+          <b-dropdown-item active>目標</b-dropdown-item>
+          <b-dropdown-item>目標方針</b-dropdown-item>
+          <b-dropdown-item>中間面談</b-dropdown-item>
+          <b-dropdown-item >成果</b-dropdown-item>
+          <b-dropdown-item >評価</b-dropdown-item>
+          <b-dropdown-item >作業ログ</b-dropdown-item>
+          <b-dropdown-divider></b-dropdown-divider>
+          <b-dropdown-item >設定</b-dropdown-item>
+        </b-dropdown>
+      </div>
+      <div　v-if="this.windowSize > 800">
+          <b-button pill variant="outline-secondary" class="nav-btn">目標</b-button>
+          <b-button pill variant="outline-secondary"class="nav-btn">目標方針</b-button>
+          <b-button pill variant="outline-secondary"class="nav-btn">中間面談</b-button>
+          <b-button pill variant="outline-secondary"class="nav-btn">成果</b-button>
+          <b-button pill variant="outline-secondary"class="nav-btn">評価</b-button>
+          <b-button pill variant="outline-secondary"class="nav-btn">作業ログ</b-button>
+          <b-button pill variant="outline-secondary"class="nav-btn">設定</b-button>
+      </div>
     </div>
 </template>
 
 <script>
   export default {
     name: 'nav_button',
+    data(){
+        return{
+            windowSize: 0
+        }
+    },
+    created(){
+        this.windowSize = window.innerWidth
+    }
   }
 
 </script>
 
 <style>
   .nav-btn {
-    border-radius: 15px;
     width: 100px;
   }
 
