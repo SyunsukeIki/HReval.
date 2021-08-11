@@ -8,6 +8,13 @@
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'>
+
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+    <!-- Load Vue followed by BootstrapVue, and BootstrapVueIcons -->
+    <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
     <!-- Styles -->
     <style>
         body {

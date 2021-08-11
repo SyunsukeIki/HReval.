@@ -18,6 +18,8 @@ Vue.component('sidebar', require('./template/Sidebar.vue').default);
 Vue.component('profile', require('./template/Profile.vue').default);
 Vue.component('nav_button', require('./template/Nav_Button.vue').default);
 Vue.component('worklog', require('./template/Worklog.vue').default);
+Vue.component('set_target', require('./template/Set_Target.vue').default);
+Vue.component('first_target_sec', require('./template/First_target_sec.vue').default);
 
 const app = new Vue({
     el: '#app',   

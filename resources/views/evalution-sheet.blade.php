@@ -2,6 +2,7 @@
 
 @section('sheet-content')
     <div  id="sheet-content" class="container-md">
-      <worklog />
+      <!-- <worklog /> -->
+      <set_target />
     </div>
 @endsection
