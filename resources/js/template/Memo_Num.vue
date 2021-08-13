@@ -1,6 +1,6 @@
 <template>
     <div class="memo">
-        <b-button id="show-btn" variant="outline-info" @click="$bvModal.show('bv-modal-example')"><b-icon icon="journal-text" aria-hidden="true"></b-icon></b-button>
+        <b-button pill id="show-btn" variant="outline-info" @click="$bvModal.show('bv-modal-example')"><b-icon icon="journal-text" aria-hidden="true"></b-icon></b-button>
         <b-modal id="bv-modal-example" title="メモ" hide-footer>
             <b>①在籍年数毎に求めるもの</b>
             <br>

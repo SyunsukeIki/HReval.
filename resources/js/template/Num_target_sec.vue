@@ -9,16 +9,16 @@
         <memo-num />
 
         <!-- Element to collapse -->
-        <b-collapse id="collapse-2">
+        <b-collapse id="collapse-2" class="mt-2">
             <b-card>
                 <b-badge pill variant="info">項目概要</b-badge>
                 <p class="card-text">自分自身の売上達成率で計算して下さい。 病気などによる長期離脱やその他イレギュラーによる未達は都度考慮します。</p>
             </b-card>
         </b-collapse>
-        <b-collapse id="collapse-2">
+        <b-collapse id="collapse-2" class="mt-2">
             <b-card>
                 <b-badge pill variant="info">尺度</b-badge>
-                <p><b-table striped borderless outlined small fixed :items="items" :fields="fields"></b-table></p>
+                <p><b-table striped bordered outlined small fixed :items="items" :fields="fields"></b-table></p>
             </b-card>
         </b-collapse>
     </div>

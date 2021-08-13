@@ -1,7 +1,7 @@
 <template>
     <div class="memo">
             <div>
-                <b-button variant="outline-info" v-b-modal.my-modal><b-icon icon="journal-text" aria-hidden="true"></b-icon></b-button>
+                <b-button pill variant="outline-info" v-b-modal.my-modal><b-icon icon="journal-text" aria-hidden="true"></b-icon></b-button>
                 <b-modal id="my-modal" title="メモ" hide-footer>
                     <b>①在籍年数毎に求めるもの</b>
             <br>
