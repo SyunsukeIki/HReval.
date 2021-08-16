@@ -21,6 +21,7 @@ Vue.component('worklog', require('./template/Worklog.vue').default);
 Vue.component('set-target', require('./template/Set_Target.vue').default);
 Vue.component('first_target_sec', require('./template/First_target_sec.vue').default);
 Vue.component('mid-interview', require('./template/MidInterview.vue').default);
+Vue.component('policy', require('./template/Policy.vue').default);
 
 const app = new Vue({
     el: '#app',   

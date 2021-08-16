@@ -16,8 +16,6 @@
                     rows="3"
                     max-rows="6"
                     ></b-form-textarea>
-
-                    <pre class="mt-3 mb-0">{{ input_text }}</pre>
                 </div>
             </template>
 
@@ -50,11 +48,6 @@
         name: 'advice-button',
         props:{input_modal_id:null,
                 disp_modal_id:null,
-        },
-        data() {
-            return {
-                input_text: "",
-            }
         },
     };
 </script>

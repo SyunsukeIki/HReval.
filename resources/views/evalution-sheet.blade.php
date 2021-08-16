@@ -5,5 +5,6 @@
       <!-- <worklog /> -->
       <!-- <set-target /> -->
       <mid-interview />
+      <!-- <policy /> -->
     </div>
 @endsection
