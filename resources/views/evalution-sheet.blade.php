@@ -2,9 +2,6 @@
 
 @section('sheet-content')
     <div  id="sheet-content" class="container-md">
-      <!-- <worklog /> -->
-      <!-- <set-target /> -->
-      <mid-interview />
-      <!-- <policy /> -->
+      <eval-sheet-bottom />
     </div>
 @endsection

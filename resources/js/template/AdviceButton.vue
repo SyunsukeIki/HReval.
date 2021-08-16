@@ -49,6 +49,11 @@
         props:{input_modal_id:null,
                 disp_modal_id:null,
         },
+        data () {
+            return {
+                input_text:"",
+            }
+        },
     };
 </script>
 

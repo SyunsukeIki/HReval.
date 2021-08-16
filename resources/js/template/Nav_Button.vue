@@ -13,12 +13,12 @@
         </b-dropdown>
       </div>
       <div　v-if="this.windowSize > 800">
-          <b-button pill variant="outline-secondary" class="nav-btn">目標</b-button>
-          <b-button pill variant="outline-secondary"class="nav-btn">目標方針</b-button>
-          <b-button pill variant="outline-secondary"class="nav-btn">中間面談</b-button>
+          <b-button pill variant="outline-secondary" class="nav-btn" @click="evalutionSheetEvent">目標</b-button>
+          <b-button pill variant="outline-secondary"class="nav-btn" @click="policyEvent">目標方針</b-button>
+          <b-button pill variant="outline-secondary"class="nav-btn" @click="midInterviewEvent">中間面談</b-button>
           <b-button pill variant="outline-secondary"class="nav-btn">成果</b-button>
           <b-button pill variant="outline-secondary"class="nav-btn">評価</b-button>
-          <b-button pill variant="outline-secondary"class="nav-btn">作業ログ</b-button>
+          <b-button pill variant="outline-secondary"class="nav-btn" @click="worklogEvent">作業ログ</b-button>
           <b-button pill variant="outline-secondary"class="nav-btn">設定</b-button>
       </div>
     </div>
@@ -26,7 +26,7 @@
 
 <script>
   export default {
-    name: 'nav_button',
+    name: 'nav-button',
     data(){
         return{
             windowSize: 0
@@ -34,6 +34,20 @@
     },
     created(){
         this.windowSize = window.innerWidth
+    },
+    methods: {
+      worklogEvent() {
+        this.$emit('worklog-event')
+      },
+      policyEvent() {
+        this.$emit('policy-event')
+      },
+      evalutionSheetEvent() {
+        this.$emit('evalution-sheet-event')
+      },
+      midInterviewEvent() {
+        this.$emit('mid-interview-event')
+      },
     }
   }
 

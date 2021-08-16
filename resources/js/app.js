@@ -16,12 +16,7 @@ Vue.component('my-header', require('./template/Header.vue').default);
 Vue.component('my-button', require('./template/Button.vue').default);
 Vue.component('sidebar', require('./template/Sidebar.vue').default);
 Vue.component('profile', require('./template/Profile.vue').default);
-Vue.component('nav_button', require('./template/Nav_Button.vue').default);
-Vue.component('worklog', require('./template/Worklog.vue').default);
-Vue.component('set-target', require('./template/Set_Target.vue').default);
-Vue.component('first_target_sec', require('./template/First_target_sec.vue').default);
-Vue.component('mid-interview', require('./template/MidInterview.vue').default);
-Vue.component('policy', require('./template/Policy.vue').default);
+Vue.component('eval-sheet-bottom', require('./template/EvalutionSheetBottom.vue').default);
 
 const app = new Vue({
     el: '#app',   
@@ -29,10 +24,6 @@ const app = new Vue({
 
 const content = new Vue({
   el: '#content',   
-})
-
-const nav = new Vue({
-  el: '#nav',   
 })
 
 const sheet_content = new Vue({
