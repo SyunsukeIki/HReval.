@@ -48,7 +48,7 @@
         <!-- 下部ボタン -->
         <b-container class="bv-example-row">
             <b-row align-h="end">
-                <b-col cols="3"><b-button  variant="info">保存</b-button>
+                <b-col cols="3"><b-button variant="info">保存</b-button>
                 <span><b-button variant="info">承認依頼</b-button></span>
                 </b-col>
             </b-row>
@@ -63,7 +63,7 @@
     import NumTargetSec from './Num_target_sec.vue';
 
     export default {
-        name: 'set_target',
+        name: 'set-target',
         components: {FirstTargetSec, SecondTargetSec, NumTargetSec},
     };
 </script>
