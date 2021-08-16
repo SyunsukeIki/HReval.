@@ -51,7 +51,8 @@
                 { name: '山田太郎', memo: 'ここにメモを表示', date: '20xx年xx月xx日' },
                 { name: '山田太郎', memo: 'ここにメモを表示', date: '20xx年xx月xx日' }
                 ],
-                headVariant: ['light']
+                headVariant: ['light'],
+                text:"",
             }
         }
     };

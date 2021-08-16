@@ -16,10 +16,10 @@
 
         <!-- 行動目標の目標項目 -->
         <first-target-sec />
-        <advice-button />
+        <advice-button input_modal_id="first_advice_input" disp_modal_id="first_advice_disp" />
 
         <second-target-sec />
-        <advice-button />
+        <advice-button input_modal_id="second_advice_input" disp_modal_id="second_advice_disp"/>
 
         <hr>
 
@@ -39,7 +39,7 @@
 
         <!-- 数値目標の目標項目 -->
         <num-target-sec />
-        <advice-button />
+        <advice-button input_modal_id="num_advice_input" disp_modal_id="num_advice_disp"/>
     </article>
 
 </template>
