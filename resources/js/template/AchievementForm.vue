@@ -198,7 +198,8 @@
                     { level: 6, achievement: '100%' }
                 ],
                 file1: null,
-                file2: null
+                file2: null,
+                text:"",
             }
         }
     };

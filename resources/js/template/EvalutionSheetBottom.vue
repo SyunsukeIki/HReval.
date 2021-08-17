@@ -3,7 +3,7 @@
         <nav-button @worklog-event="onClickWorkLogBtn"
                     @policy-event="onClickPolicyBtn"
                     @evalution-sheet-event="onClickEvalutionSheetBtn"
-                    @mid-interview="onClickMidInterviewBtn"
+                    @mid-interview-event="onClickMidInterviewBtn"
                     @achievement-form-event="onClickAchievementFormBtn"
                     @evaluation-form-event="onClickEvaluationFormBtn"
         />
@@ -36,12 +36,6 @@ export default {
   data () {
     return {
       show:"worklog",
-      isVisibleWorkLog: true,
-      isVisibleSetTarget: false,
-      isVisibleMidInterview: false,
-      isVisiblePolicy: false,
-      isVisibleAchievementForm: false,
-      isVisibleEvaluationForm: false,
     }
   },
   methods: {

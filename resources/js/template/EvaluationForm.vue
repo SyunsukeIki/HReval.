@@ -126,7 +126,8 @@
                     { level: 4, achievement: '60%' },
                     { level: 5, achievement: '80%' },
                     { level: 6, achievement: '100%' }
-                ]
+                ],
+                text:"",
             }
         }
             
