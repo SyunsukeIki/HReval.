@@ -16,8 +16,8 @@
           <b-button pill variant="outline-secondary" class="nav-btn" @click="evalutionSheetEvent">目標</b-button>
           <b-button pill variant="outline-secondary"class="nav-btn" @click="policyEvent">目標方針</b-button>
           <b-button pill variant="outline-secondary"class="nav-btn" @click="midInterviewEvent">中間面談</b-button>
-          <b-button pill variant="outline-secondary"class="nav-btn">成果</b-button>
-          <b-button pill variant="outline-secondary"class="nav-btn">評価</b-button>
+          <b-button pill variant="outline-secondary"class="nav-btn" @click="achievementFormEvent">成果</b-button>
+          <b-button pill variant="outline-secondary"class="nav-btn" @click="evaluationFormEvent">評価</b-button>
           <b-button pill variant="outline-secondary"class="nav-btn" @click="worklogEvent">作業ログ</b-button>
           <b-button pill variant="outline-secondary"class="nav-btn">設定</b-button>
       </div>
@@ -47,6 +47,12 @@
       },
       midInterviewEvent() {
         this.$emit('mid-interview-event')
+      },
+      achievementFormEvent() {
+        this.$emit('achievement-form-event')
+      },
+      evaluationFormEvent() {
+        this.$emit('evaluation-form-event')
       },
     }
   }

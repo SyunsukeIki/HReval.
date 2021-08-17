@@ -5,7 +5,6 @@
             <p class="policy-text">前年より売上の数値を意識して目標に反映させる</p>
         </section>
     </article>
-
 </template >
 
 
