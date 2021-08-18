@@ -12,11 +12,11 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
-Vue.component('my-header', require('./template/Header.vue').default);
-Vue.component('my-button', require('./template/Button.vue').default);
-Vue.component('sidebar', require('./template/Sidebar.vue').default);
-Vue.component('profile', require('./template/Profile.vue').default);
-Vue.component('eval-sheet-bottom', require('./template/EvalutionSheetBottom.vue').default);
+Vue.component('my-header', require('./components/templates/Header.vue').default);
+Vue.component('my-button', require('./components/atoms/Button.vue').default);
+Vue.component('sidebar', require('./components/atoms/Sidebar.vue').default);
+Vue.component('profile', require('./components/templates/Profile.vue').default);
+Vue.component('eval-sheet-bottom', require('./components/templates/EvalutionSheetBottom.vue').default);
 
 const app = new Vue({
     el: '#app',   

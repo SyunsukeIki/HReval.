@@ -28,9 +28,9 @@
 </template>
 
 <script>
-import '../../css/header.css';
-import MyButton from './Button.vue';
-import MySidebar from './Sidebar.vue';
+import '../../../css/header.css';
+import MyButton from '../atoms/Button.vue';
+import MySidebar from '../atoms/Sidebar.vue';
 
 export default {
   name: 'my-header',

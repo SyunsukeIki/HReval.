@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import '../../css/sidebar.css';
+import '../../../css/sidebar.css';
 
 export default {
   name: 'my-sidebar',

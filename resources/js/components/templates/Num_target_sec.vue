@@ -25,7 +25,7 @@
 </template>
 
 <script>
-    import MemoNum from './Memo_Num.vue';
+    import MemoNum from '../atoms/Memo_Num.vue';
 
     export default {
         name: 'num-target-sec',

@@ -49,7 +49,7 @@
     import FirstTargetSec from './First_target_sec.vue';
     import SecondTargetSec from './Second_target_sec.vue';
     import NumTargetSec from './Num_target_sec.vue';
-    import AdviceButton from './AdviceButton.vue';
+    import AdviceButton from '../atoms/AdviceButton.vue';
 
     export default {
         name: 'mid-interview',
