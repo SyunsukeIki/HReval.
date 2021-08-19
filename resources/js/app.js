@@ -18,6 +18,7 @@ Vue.component('sidebar', require('./components/atoms/Sidebar.vue').default);
 Vue.component('profile', require('./components/templates/Profile.vue').default);
 Vue.component('eval-sheet-bottom', require('./components/templates/EvalutionSheetBottom.vue').default);
 Vue.component('sheet-list', require('./components/pages/SheetList.vue').default);
+Vue.component('user-list', require('./components/pages/UserList.vue').default);
 
 const app = new Vue({
     el: '#app',   
