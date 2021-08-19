@@ -30,7 +30,3 @@ const content = new Vue({
 const sheet_content = new Vue({
   el: '#sheet-content',   
 })
-
-const sheet_list_content = new Vue({
-  el: '#sheet-list-content',   
-})

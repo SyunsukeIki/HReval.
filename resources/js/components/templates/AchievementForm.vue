@@ -1,10 +1,15 @@
 <template>
     <div>
+        <div class="achievement">
+            <achievement v-for="item in achievements" :key="item.id" :phase="item.phase" :collapse_id="item.id" 
+                         @edit-event="openEditModal"
+            />
+        </div>
         <div class="button">
-            <b-button v-b-modal="'achievement-modal'" variant="info">成果追加</b-button>
+            <b-button variant="info" @click="openModal">成果追加</b-button>
         </div>
 
-        <b-modal id="achievement-modal" size="lg" title="成果追加" hide-footer>
+        <b-modal id="achievement-modal" size="lg" :title="modalTitle" hide-footer>
             <h4 class="theme">行動目標</h4>
             <b-container class="bv-example-row">
                 <b-row align-h="start">
@@ -29,7 +34,6 @@
                     <b-col cols="5">
                         <template>
                             <div>
-                                <!-- Styled -->
                                 <b-form-file
                                 v-model="file1"
                                 :state="Boolean(file1)"
@@ -82,7 +86,6 @@
                     <b-col cols="5">
                         <template>
                             <div>
-                                <!-- Styled -->
                                 <b-form-file
                                 v-model="file1"
                                 :state="Boolean(file1)"
@@ -138,7 +141,6 @@
                     <b-col cols="5">
                         <template>
                             <div>
-                                <!-- Styled -->
                                 <b-form-file
                                 v-model="file1"
                                 :state="Boolean(file1)"
@@ -166,7 +168,7 @@
                 </div>
             </b-container>
             <div class="button">
-                <b-button v-b-modal.modal-lg variant="info">登録</b-button>
+                <b-button v-b-modal.modal-lg variant="info" @click="appendAchievement">{{modalButtonLabel}}</b-button>
             </div>
         </b-modal>
     </div>
@@ -174,10 +176,17 @@
 
 
 <script>
+import Achievement from "./Achievement.vue"
     export default {
         name: 'achievement-form',
+        components:{Achievement},
         data() {
             return {
+                achievements:[
+                    {id:"collapse1",phase:"中間"},
+                ],
+                modalTitle:"成果登録",
+                modalButtonLabel:"登録",
                 selected: null,
                 options: [
                     { value: null, text: '評点を選択' },
@@ -201,6 +210,29 @@
                 file2: null,
                 text:"",
             }
+        },
+        methods:{
+            openModal(){
+                this.modalTitle="成果登録";
+                this.modalButtonLabel="登録";
+                if(this.achievements.length==2){
+                    alert("成果は２つ以上登録できません");
+                    return;
+                }
+                this.$bvModal.show('achievement-modal')
+            },
+            openEditModal(){
+                this.modalTitle="成果編集";
+                this.modalButtonLabel="更新";
+                this.$bvModal.show('achievement-modal')
+            },
+            appendAchievement(){
+                this.$bvModal.hide('achievement-modal');
+                if(this.modalButtonLabel=="登録"){
+                    this.achievements.push({id:"collapse2",phase:"最終"})
+                }
+                alert("成果を"+this.modalButtonLabel+"しました。");
+            },
         }
     };
 </script>

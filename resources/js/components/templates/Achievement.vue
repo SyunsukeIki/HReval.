@@ -2,10 +2,10 @@
     <article>
         <section>
             <div>
-                <b-button v-b-toggle.collapse-1 variant="primary">+</b-button>
-                <h3>フェーズ：中間</h3>
-                <span><b-button variant="outline-info" pill><b-icon icon="pencil-fill"></b-icon></b-button></span>
-                <b-collapse id="collapse-1" class="mt-2">
+                <b-button v-b-toggle="collapse_id" variant="primary">+</b-button>
+                <h3>フェーズ：{{phase}}</h3>
+                <span><b-button variant="outline-info" pill @click="edidEvent"><b-icon icon="pencil-fill"></b-icon></b-button></span>
+                <b-collapse :id=collapse_id class="mt-2">
                     <b-card>
                         <h4 class="theme">行動目標</h4>
                         <b-container class="bv-example-row">
@@ -81,6 +81,7 @@
 <script>
     export default {
         name: 'achievement',
+        props:['phase','collapse_id'],
         data() {
             return {
                 fields: [{ key: 'level', label: '段階' },{ key: 'achievement', label: '達成率' }],
@@ -93,6 +94,11 @@
                 { level: 6, achievement: '100%' }
                 ]
             }
+        },
+        methods:{
+            edidEvent(){
+                this.$emit('edit-event')
+            },
         }
     };
 </script>
