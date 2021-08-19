@@ -3,10 +3,10 @@
     <b-sidebar id="sidebar" title="MENU" text-variant="light" shadow>
       <div class="px-3 py-2">
         <ol>
-          <li><a href="#">通知内容</a></li>
+          <li><a href="/">評価シート(仮)</a></li>
           <li><a href="#">組織図</a></li>
-          <li><a href="#">評価シート一覧</a></li>
-          <li><a href="#">月次データ</a></li>
+          <li><a href="/sheetlist">評価シート一覧</a></li>
+          <li><a href="/userlist">ユーザー一覧</a></li>
         </ol>
       </div>
     </b-sidebar>
