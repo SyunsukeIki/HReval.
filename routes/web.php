@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::view('/sheetlist', 'sheet-list');
 
+Route::view('/userlist', 'user-list');
+
