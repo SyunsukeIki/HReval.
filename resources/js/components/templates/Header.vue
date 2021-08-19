@@ -18,7 +18,6 @@
               </b-dropdown>
 	            </div>
 	          
-            <b-button variant="outline-light" @onClick="onLogin"  v-if="!user">Log in</b-button>
             <my-button size="small" @onClick="onLogout" label="MENU" class="menu" variant="primary"/>
             <my-sidebar />
         </div>
