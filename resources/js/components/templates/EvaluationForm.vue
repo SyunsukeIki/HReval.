@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="evaluation">
-            <evaluation v-for="item in evaluations" :key="item.id" :evaluation_num="item.evaluation_num" :collapse_id="item.id" 
+            <evaluation v-for="item in evaluations" :key="item.id" :evaluation_num="item.evaluation_num" :collapse_id="item.id" :count_sm="count_sm"
                          @edit-event="openEditModal"
             />
         </div>
@@ -29,7 +29,7 @@
                     <p class="comment-text">しっかりできていたと思う。</p>
                 </div>
                 <b-row align-h="start">
-                    <b-col cols="2"><b-badge pill variant="info">一次評点</b-badge></b-col>
+                    <b-col cols="2"><b-badge pill variant="info">{{ count_sm }}次評点</b-badge></b-col>
                     <b-col cols="3">
                         <div>
                             <b-form-select v-model="selected" :options="options"></b-form-select>
@@ -38,7 +38,7 @@
                     </b-col>
                 </b-row>
                 <div class="comment">
-                    <b-badge pill variant="info">一次コメント</b-badge>
+                    <b-badge pill variant="info">{{ count_sm }}次コメント</b-badge>
                     <div>
                         <b-form-textarea
                         id="textarea"
@@ -78,7 +78,7 @@
                 </div>
 
                 <b-row align-h="start">
-                    <b-col cols="2"><b-badge pill variant="info">一次評点</b-badge></b-col>
+                    <b-col cols="2"><b-badge pill variant="info">{{ count_sm }}次評点</b-badge></b-col>
                     <b-col cols="3">
                         <div>
                             <b-form-select v-model="selected" :options="options"></b-form-select>
@@ -88,7 +88,7 @@
                 </b-row>
 
                 <div class="comment">
-                    <b-badge pill variant="info">一次コメント</b-badge>
+                    <b-badge pill variant="info">{{ count_sm }}次コメント</b-badge>
                     <div>
                         <b-form-textarea
                         id="textarea"
@@ -101,7 +101,7 @@
                 </div>
             </b-container>
             <div class="button">
-                <b-button v-b-modal.modal-lg variant="info" @click="appendAchievement">{{modalButtonLabel}}</b-button>
+                <b-button v-b-modal.modal-lg variant="info" @click="appendEvaluation">{{modalButtonLabel}}</b-button>
             </div>
         </b-modal>
     </div>
@@ -141,6 +141,7 @@ import Evaluation from "./Evaluation.vue"
                 ],
                 text:"",
                 count: 0,
+                count_sm: 1,
             }
         },
         mounted : function(){
@@ -150,7 +151,7 @@ import Evaluation from "./Evaluation.vue"
             openModal(){
                 this.modalTitle="評価登録";
                 this.modalButtonLabel="登録";
-
+                this.count_sm++
                 this.$bvModal.show('evaluation-modal')
             },
             openEditModal(){
@@ -158,7 +159,7 @@ import Evaluation from "./Evaluation.vue"
                 this.modalButtonLabel="更新";
                 this.$bvModal.show('evaluation-modal')
             },
-            appendAchievement(){
+            appendEvaluation(){
                 this.$bvModal.hide('evaluation-modal');
                 if(this.modalButtonLabel=="登録"){
                     this.count++
