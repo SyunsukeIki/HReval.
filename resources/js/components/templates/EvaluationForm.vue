@@ -116,7 +116,7 @@ import Evaluation from "./Evaluation.vue"
         data() {
             return {
                 evaluations:[
-                    {id:"collapse"+this.count, evaluation_num:"一次"},
+                    {id:"collapse"+this.count, evaluation_num:"1次"},
                 ],
                 modalTitle:"評価登録",
                 modalButtonLabel:"登録",
@@ -143,6 +143,9 @@ import Evaluation from "./Evaluation.vue"
                 count: 0,
             }
         },
+        mounted : function(){
+            this.count = this.evaluations.length
+        },
         methods:{
             openModal(){
                 this.modalTitle="評価登録";
@@ -158,8 +161,8 @@ import Evaluation from "./Evaluation.vue"
             appendAchievement(){
                 this.$bvModal.hide('evaluation-modal');
                 if(this.modalButtonLabel=="登録"){
-                    this.evaluations.push({id:"collapse"+this.count, evaluation_num:"二次"})
-                    count++
+                    this.count++
+                    this.evaluations.push({id:"collapse"+this.count, evaluation_num:this.count+"次"})
                 }
                 alert("評価を"+this.modalButtonLabel+"しました。");
             },
