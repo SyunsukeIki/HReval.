@@ -4,13 +4,14 @@
             <div>
                 <b-container class="bv-example-row">
                     <b-row>
-                        <b-col cols="2"><b-button v-b-toggle.collapse-1 variant="primary">+</b-button><p class="evaluation-num">一次評価</p></b-col>
+                        <b-col cols="2"><b-button v-b-toggle.collapse-1 variant="primary">+</b-button><p class="evaluation-num">{{evaluation_num}}評価</p></b-col>
                         <b-col cols="2"><b-badge pill variant="info">評価者</b-badge><span>山田花子</span></b-col>
                         <b-col cols="2"><b-badge pill variant="info">登録日</b-badge><span>2021/07/26</span></b-col>
-                        <b-col cols="2"><b-button variant="outline-info" pill><b-icon icon="pencil-fill"></b-icon></b-button></b-col>
+                        <b-col cols="2"><b-button variant="outline-info" pill @click="edidEvent"><b-icon icon="pencil-fill"></b-icon></b-button></b-col>
                     </b-row>
                 </b-container>
                 <b-collapse id="collapse-1" class="mt-2">
+                    <b-card>
                         <b-container class="bv-example-row">
                             <b-row align-h="between">
                                 <b-col cols="3"><h4 class="theme">行動目標</h4></b-col>
@@ -91,7 +92,14 @@
 <script>
     export default {
         name: 'evaluation',
+        props:['evaluation_num','collapse_id'],
+        methods:{
+            edidEvent(){
+                this.$emit('edit-event')
+            },
+        }
     };
+
 </script>
 
 

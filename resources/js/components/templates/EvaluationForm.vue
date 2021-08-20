@@ -1,10 +1,15 @@
 <template>
     <div>
+        <div class="evaluation">
+            <evaluation v-for="item in evaluations" :key="item.id" :evaluation_num="item.evaluation_num" :collapse_id="item.id" 
+                         @edit-event="openEditModal"
+            />
+        </div>
         <div class="button">
-            <b-button v-b-modal="'evaluation-modal'" variant="info">評価登録</b-button>
+            <b-button v-b-modal="'evaluation-modal'" variant="info" @click="openModal">評価登録</b-button>
         </div>
 
-        <b-modal id="evaluation-modal" size="lg" title="評価登録" hide-footer>
+        <b-modal id="evaluation-modal" size="lg" :title="modalTitle" hide-footer>
             <h4 class="theme">行動目標</h4>
             <b-container class="bv-example-row">
                 <b-row align-h="start">
@@ -96,7 +101,7 @@
                 </div>
             </b-container>
             <div class="button">
-                <b-button v-b-modal.modal-lg variant="info">登録</b-button>
+                <b-button v-b-modal.modal-lg variant="info" @click="appendAchievement">{{modalButtonLabel}}</b-button>
             </div>
         </b-modal>
     </div>
@@ -104,10 +109,17 @@
 
 
 <script>
+import Evaluation from "./Evaluation.vue"
     export default {
         name: 'evaluation-form',
+        components:{Evaluation},
         data() {
             return {
+                evaluations:[
+                    {id:"collapse"+this.count, evaluation_num:"一次"},
+                ],
+                modalTitle:"評価登録",
+                modalButtonLabel:"登録",
                 selected: null,
                 options: [
                     { value: null, text: '評点を選択' },
@@ -128,9 +140,30 @@
                     { level: 6, achievement: '100%' }
                 ],
                 text:"",
+                count: 0,
             }
+        },
+        methods:{
+            openModal(){
+                this.modalTitle="評価登録";
+                this.modalButtonLabel="登録";
+
+                this.$bvModal.show('evaluation-modal')
+            },
+            openEditModal(){
+                this.modalTitle="評価編集";
+                this.modalButtonLabel="更新";
+                this.$bvModal.show('evaluation-modal')
+            },
+            appendAchievement(){
+                this.$bvModal.hide('evaluation-modal');
+                if(this.modalButtonLabel=="登録"){
+                    this.evaluations.push({id:"collapse"+this.count, evaluation_num:"二次"})
+                    count++
+                }
+                alert("評価を"+this.modalButtonLabel+"しました。");
+            },
         }
-            
     };
 </script>
 
