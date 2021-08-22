@@ -141,17 +141,17 @@ import Evaluation from "./Evaluation.vue"
                 ],
                 text:"",
                 count: 0,
-                count_sm: 1,
+                count_sm: 0,
             }
         },
         mounted : function(){
             this.count = this.evaluations.length
+            this.count_sm = this.evaluations.length + 1
         },
         methods:{
             openModal(){
                 this.modalTitle="評価登録";
                 this.modalButtonLabel="登録";
-                this.count_sm++
                 this.$bvModal.show('evaluation-modal')
             },
             openEditModal(){
@@ -163,6 +163,7 @@ import Evaluation from "./Evaluation.vue"
                 this.$bvModal.hide('evaluation-modal');
                 if(this.modalButtonLabel=="登録"){
                     this.count++
+                    this.count_sm++
                     this.evaluations.push({id:"collapse"+this.count, evaluation_num:this.count+"次"})
                 }
                 alert("評価を"+this.modalButtonLabel+"しました。");
