@@ -1,21 +1,23 @@
 <template>
   <div class="sec1">
-    <b-button v-b-toggle.collapse-2 class="m-1" variant="primary">+</b-button>
-    <b-badge pill variant="info">年度</b-badge><span class="label-text">令和3年度上期（2021/07/01~2021/11/31) </span>
-    <b-badge pill variant="info">被評価者</b-badge><span class="label-text">ビズ　太郎 </span>
+    <b-button v-b-toggle.collapse-2 class="m-1" variant="primary" size="sm" pill>
+       <span class="when-open">－</span><span class="when-closed">＋</span>
+    </b-button>
+    <b-badge variant="info">年度</b-badge><span class="label-text">令和3年度上期（2021/07/01~2021/11/31) </span>
+    <b-badge variant="info">被評価者</b-badge><span class="label-text">ビズ　太郎 </span>
     <b-collapse id="collapse-2" border="none">
       <b-card>
         <div class="content">
           <b-img src="/images/user.svg" width="100px"></b-img>
           <div class="shosai">
             <div class="shosai-box1">
-              <b-badge pill variant="info">評価者</b-badge>
+              <b-badge variant="info">評価者</b-badge>
               <div class="evaluator">
                 <p class="label-text">ビズ　一郎（リーダー）</p>
                 <p class="label-text">ビズ　次郎（課長）</p>
               </div>
             </div>
-            <b-badge pill variant="info">状態</b-badge><span class="state-text">目標設定</span>
+            <b-badge variant="info">状態</b-badge><span class="state-text label-text">目標設定</span>
           </div>
         </div>
       </b-card>
@@ -64,5 +66,10 @@
 .state-text {
   margin-left:28px;
   margin-right:30px;
+}
+
+.collapsed > .when-open,
+.not-collapsed > .when-closed {
+  display: none;
 }
 </style>

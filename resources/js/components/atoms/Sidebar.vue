@@ -1,6 +1,6 @@
 <template>
   <div calss="body">
-    <b-sidebar id="sidebar" title="MENU" text-variant="light" shadow>
+    <b-sidebar id="sidebar" title="MENU" text-variant="light" shadow backdrop>
       <div class="px-3 py-2">
         <ol>
           <li><a href="/">評価シート(仮)</a></li>
