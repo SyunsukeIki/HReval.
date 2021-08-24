@@ -1,16 +1,16 @@
 <template>
     <div class="memo">
-        <b-button pill id="show-btn" variant="outline-info" @click="$bvModal.show('bv-modal-example')"><b-icon icon="journal-text" aria-hidden="true"></b-icon></b-button>
-        <b-modal id="bv-modal-example" title="メモ" hide-footer>
-            <b>①在籍年数毎に求めるもの</b>
+        <b-button pill id="show-btn" variant="outline-info" v-b-modal="memo3_modal_id"><b-icon icon="journal-text" aria-hidden="true"></b-icon></b-button>
+        <b-modal :id=memo3_modal_id title="メモ" hide-footer size="lg">
+            <p>①在籍年数毎に求めるもの</p>
             <br>
-            <b-badge pill variant="info">目標内容</b-badge>
+            <b-badge variant="info"><span class="badge-size">目標内容</span></b-badge>
             <p>自分のことがきちんとできるようになる。社員としての基本を身につける。</p>
             <hr>
-            <b-badge pill variant="info">メモ一覧</b-badge>
+            <b-badge variant="info"><span class="badge-size">メモ一覧</span></b-badge>
             <template>
                 <div>
-                    <b-table bordered :items="items" :fields="fields" :head-variant="headVariant"></b-table>
+                    <b-table bordered :items="items" :fields="fields"></b-table>
                 </div>
             </template>
             <hr>
@@ -30,10 +30,8 @@
 
             <!-- 登録ボタンの右寄せ -->
             <b-container class="bv-example-row">
-                <b-row>
-                    <b-col></b-col>
-                    <b-col></b-col>
-                    <b-col><b-button class="mt-3" block @click="$bvModal.hide('bv-modal-example')" variant="primary">登録</b-button></b-col>
+                <b-row align-h="end">
+                    <b-col cols="3"><b-button class="mt-1" block @click="$bvModal.hide('bv-modal-example')" variant="primary">登録</b-button></b-col>
                 </b-row>
             </b-container>
 
@@ -44,6 +42,8 @@
 <script>
     export default {
         name: 'memo-num',
+        props:{memo3_modal_id:null,
+        },
         data() {
             return {
                 fields: [{ key: 'name', label: '投稿者' },{ key: 'memo', label: 'メモ' },{ key: 'date', label: '投稿日' }],
@@ -51,7 +51,6 @@
                 { name: '山田太郎', memo: 'ここにメモを表示', date: '20xx年xx月xx日' },
                 { name: '山田太郎', memo: 'ここにメモを表示', date: '20xx年xx月xx日' }
                 ],
-                headVariant: ['light'],
                 text:"",
             }
         }

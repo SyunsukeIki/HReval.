@@ -1,0 +1,58 @@
+
+.memo {
+    display: inline-block;
+}
+
+
+.sec-content {
+    margin: 15px;
+}
+
+.sec-name {
+    margin: 0 30px 0 10px;
+}
+
+article {
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #dbdbdc;
+}
+
+.sub-heading{
+    padding: 0.25em 0.5em;/*上下 左右の余白*/
+    color: #17a2b8;/*文字色*/
+    background: transparent;/*背景透明に*/
+    border-left: solid 5px #7db4e6;/*左線*/
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.badge-size {
+    display: inline;
+    font-size:  15px;
+}
+
+hr {
+    color: #dbdbdc;
+}
+
+.bottom-btn {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.save-btn, .request-btn {
+    margin-left: 5px;
+}
+
+.sec-content {
+    border: 1px solid #dbdbdc;
+    border-radius:10px;
+    padding: 10px;
+}
+
+.collapsed > .when-open,
+.not-collapsed > .when-closed {
+  display: none;
+}
+
