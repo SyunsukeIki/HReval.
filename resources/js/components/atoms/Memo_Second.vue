@@ -1,7 +1,8 @@
 <template>
     <div class="memo">
-        <b-button pill variant="outline-info" v-b-modal="memo2_modal_id"><b-icon icon="journal-text" aria-hidden="true"></b-icon></b-button>
+        <b-button variant="outline-info" v-b-modal="memo2_modal_id"><b-icon icon="journal-text" aria-hidden="true"></b-icon> MEMO</b-button>
         <b-modal :id=memo2_modal_id title="メモ" hide-footer size="lg">
+            <b-badge variant="info"><span class="badge-size">目標項目</span></b-badge>
             <p>②チームに貢献する</p>
             <br>
             <b-badge variant="info"><span class="badge-size">目標内容</span></b-badge>
@@ -15,11 +16,11 @@
             </template>
             <hr>
             <template>
-                <div>
+                <div class="memo-textarea">
                     <b-form-textarea
                     id="textarea"
                     v-model="text"
-                    placeholder="Enter something..."
+                    placeholder="メモを記入してください"
                     rows="3"
                     max-rows="6"
                     ></b-form-textarea>
@@ -31,7 +32,7 @@
             <!-- 登録ボタンの右寄せ -->
             <b-container class="bv-example-row">
                 <b-row align-h="end">
-                    <b-col cols="3"><b-button class="mt-1" block @click="$bvModal.hide('bv-modal-example')" variant="primary">登録</b-button></b-col>
+                    <b-col cols="2"><b-button class="mt-1" block @click="$bvModal.hide('bv-modal-example')" variant="primary">登録</b-button></b-col>
                 </b-row>
             </b-container>
         </b-modal>

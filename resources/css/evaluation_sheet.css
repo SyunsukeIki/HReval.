@@ -3,13 +3,20 @@
     display: inline-block;
 }
 
+.memo-textarea {
+    margin-bottom: 10px;
+}
 
 .sec-content {
     margin: 15px;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    padding: 10px;
 }
 
-.sec-name {
-    margin: 0 30px 0 10px;
+.memo-btn {
+    display: flex;
+    justify-content: flex-end;
 }
 
 article {
@@ -20,7 +27,7 @@ article {
 
 .sub-heading{
     padding: 0.25em 0.5em;/*上下 左右の余白*/
-    color: #17a2b8;/*文字色*/
+    color: #526A9B;/*文字色*/
     background: transparent;/*背景透明に*/
     border-left: solid 5px #7db4e6;/*左線*/
     font-size: 20px;
@@ -38,21 +45,31 @@ hr {
 
 .bottom-btn {
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 15px;
 }
 
 .save-btn, .request-btn {
-    margin-left: 5px;
+    margin-left: 15px;
 }
 
-.sec-content {
-    border: 1px solid #dbdbdc;
-    border-radius:10px;
-    padding: 10px;
+.judge-btn {
+    align-self: flex-end;
 }
 
 .collapsed > .when-open,
 .not-collapsed > .when-closed {
   display: none;
+}
+
+.advice-content {
+    border: 1px solid #dbdbdc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.record {
+    color: gray;
 }
 

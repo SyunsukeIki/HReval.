@@ -1,18 +1,10 @@
 <template>
     <div class="sec-content">
-        <b-container class="bv-example-row">
-            <b-row align-h="between">
-                <b-col cols="8">
-                    <b-button v-b-toggle.collapse-2 class="m-1" variant="primary" size="sm" pill>
-                        <span class="when-open">－</span><span class="when-closed">＋</span>
-                    </b-button>
-                    <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge><span class="label-text">リーダーが数字を把握しているのかどうか</span>
-                </b-col>
-                <!-- ここにMemoを呼び出す -->
-                <b-col cols="1"><memo-second memo2_modal_id="second_target_memo2" /></b-col>
-            </b-row>
-        </b-container>
-        
+        <b-button v-b-toggle.collapse-2 class="m-1" variant="primary" size="sm" pill>
+            <span class="when-open">－</span><span class="when-closed">＋</span>
+        </b-button>
+        <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge><span class="label-text">リーダーが数字を把握しているのかどうか</span>
+        <memo-second memo2_modal_id="second_target_memo2" class="d-flex justify-content-end"/>
 
         <b-collapse id="collapse-2" class="mt-2">
             <b-card>
