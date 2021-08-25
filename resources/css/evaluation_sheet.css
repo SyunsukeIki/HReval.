@@ -25,7 +25,7 @@ article {
     border: 1px solid #dbdbdc;
 }
 
-.sub-heading{
+.sub-heading {
     padding: 0.25em 0.5em;/*上下 左右の余白*/
     color: #526A9B;/*文字色*/
     background: transparent;/*背景透明に*/
@@ -72,4 +72,3 @@ hr {
 .record {
     color: gray;
 }
-

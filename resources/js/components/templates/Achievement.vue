@@ -3,7 +3,7 @@
         <section>
             <div>
                 <b-button v-b-toggle="collapse_id" variant="primary">+</b-button>
-                <h3>フェーズ：{{phase}}</h3>
+                <h3>{{phase}}</h3>
                 <span><b-button variant="outline-info" pill @click="edidEvent"><b-icon icon="pencil-fill"></b-icon></b-button></span>
                 <b-collapse :id=collapse_id class="mt-2">
                     <b-card>
@@ -109,7 +109,12 @@ h3 {
     display: inline;
     vertical-align: middle;
     margin: 0 15px 0 15px;
+    font-size: 20px;
 
+}
+
+.phase-text {
+    color: #6F58CC;
 }
 
 .comment-text {
