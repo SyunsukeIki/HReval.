@@ -113,9 +113,6 @@ h3 {
 
 }
 
-.phase-text {
-    color: #6F58CC;
-}
 
 .comment-text {
     border: 1px solid #dbdbdc;
