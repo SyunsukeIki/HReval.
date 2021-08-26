@@ -1,5 +1,5 @@
 <template>
-    <article>
+    <article class="eval-sheet-content">
         <section>
             <h4 class="sub-heading">目標方針</h4>
             <div class="policy-text">
@@ -27,3 +27,11 @@
         }
     }
 </script>
+
+<style>
+.policy-text {
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <article>
+    <article class="eval-sheet-content">
         <section>
             <h4 class="sub-heading">行動目標</h4>
             <b-container class="bv-example-row">

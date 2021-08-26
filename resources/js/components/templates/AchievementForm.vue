@@ -1,37 +1,38 @@
 <template>
-    <div>
+    <div class="eval-sheet-content">
         <div class="achievement">
             <achievement v-for="item in achievements" :key="item.id" :phase="item.phase" :collapse_id="item.id" 
                          @edit-event="openEditModal"
             />
         </div>
         <div class="button">
-            <b-button variant="info" @click="openModal">成果追加</b-button>
+            <b-button variant="primary" @click="openModal">成果登録</b-button>
         </div>
 
         <b-modal id="achievement-modal" size="lg" :title="modalTitle" hide-footer>
-            <h4 class="theme">行動目標</h4>
+            <h4 class="sub-heading">行動目標</h4>
             <b-container class="bv-example-row">
                 <b-row align-h="start">
-                    <b-col cols="1"><b-badge pill variant="info">項目名</b-badge></b-col>
+                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
                     <b-col cols="5"><p class="label-text">在籍年数毎に求めるもの。</p></b-col>
                 </b-row>
 
                 <b-row align-h="start">
-                    <b-col cols="1"><b-badge pill variant="info">内容</b-badge></b-col>
+                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目内容</span></b-badge></b-col>
                     <b-col cols="5"><p class="label-text">〇〇の資格を取る。</p></b-col>
                 </b-row>
 
                 <b-row align-h="start">
-                    <b-col cols="1"><b-badge pill variant="info">自己評点</b-badge></b-col>
+                    <b-col cols="5"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge></b-col>
+                    <b-col cols="5"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
+                </b-row>
+                <b-row align-h="start">
                     <b-col cols="3">
                         <div>
                             <b-form-select v-model="selected" :options="options"></b-form-select>
-                            <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
                         </div>
                     </b-col>
-                    <b-col cols="2"><b-badge pill variant="info">成果物ファイル</b-badge></b-col>
-                    <b-col cols="5">
+                    <b-col md="5" offset-md="2">
                         <template>
                             <div>
                                 <b-form-file
@@ -40,15 +41,18 @@
                                 placeholder="ファイルを選択"
                                 drop-placeholder="Drop file here..."
                                 ></b-form-file>
-                                <div class="mt-3">Selected file: {{ file1 ? file1.name : '' }}</div>
                             </div>
                         </template>
                     </b-col>
-                    <b-col cols="1"><b-icon icon="file-earmark-text"></b-icon></b-col>
+                    <b-col cols="1">
+                        <b-button v-b-tooltip.hover title="報告書(田中太郎).pdf" variant="outline-secondary">
+                            <b-icon icon="file-earmark-text" font-scale = "1.5"></b-icon>
+                        </b-button>
+                    </b-col>
                 </b-row>
 
                 <div class="comment">
-                    <b-badge pill variant="info">自己コメント</b-badge>
+                    <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                     <div>
                         <b-form-textarea
                         id="textarea"
@@ -65,42 +69,46 @@
 
             <b-container class="bv-example-row">
                 <b-row align-h="start">
-                    <b-col cols="1"><b-badge pill variant="info">項目名</b-badge></b-col>
+                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
                     <b-col cols="5"><p class="label-text">チームに貢献する。</p></b-col>
                 </b-row>
 
                 <b-row align-h="start">
-                    <b-col cols="1"><b-badge pill variant="info">内容</b-badge></b-col>
+                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目内容</span></b-badge></b-col>
                     <b-col cols="5"><p class="label-text">コミュニケーションを多くとる。</p></b-col>
                 </b-row>
 
                 <b-row align-h="start">
-                    <b-col cols="1"><b-badge pill variant="info">自己評点</b-badge></b-col>
+                    <b-col cols="5"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge></b-col>
+                    <b-col cols="5"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
+                </b-row>
+                <b-row align-h="start">
                     <b-col cols="3">
                         <div>
                             <b-form-select v-model="selected" :options="options"></b-form-select>
-                            <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
                         </div>
                     </b-col>
-                    <b-col cols="2"><b-badge pill variant="info">成果物ファイル</b-badge></b-col>
-                    <b-col cols="5">
+                    <b-col md="5" offset-md="2">
                         <template>
                             <div>
                                 <b-form-file
                                 v-model="file1"
                                 :state="Boolean(file1)"
-                                placeholder="Choose a file or drop it here..."
+                                placeholder="ファイルを選択"
                                 drop-placeholder="Drop file here..."
                                 ></b-form-file>
-                                <div class="mt-3">Selected file: {{ file1 ? file1.name : '' }}</div>
                             </div>
                         </template>
                     </b-col>
-                    <b-col cols="1"><b-icon icon="file-earmark-text"></b-icon></b-col>
+                    <b-col cols="1">
+                        <b-button v-b-tooltip.hover title="報告書(田中太郎).pdf" variant="outline-secondary">
+                            <b-icon icon="file-earmark-text" font-scale = "1.5"></b-icon>
+                        </b-button>
+                    </b-col>
                 </b-row>
 
                 <div class="comment">
-                    <b-badge pill variant="info">自己コメント</b-badge>
+                    <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                     <div>
                         <b-form-textarea
                         id="textarea"
@@ -115,30 +123,31 @@
 
             <hr>
 
-            <h4 class="theme">数値目標</h4>
+            <h4 class="sub-heading">数値目標</h4>
             <b-container class="bv-example-row">
                 <b-row align-h="start">
-                    <b-col cols="1"><b-badge pill variant="info">項目名</b-badge></b-col>
+                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
                     <b-col cols="5"><p class="label-text">売上達成率</p></b-col>
                 </b-row>
             </b-container>
             
             <div>
-                <b-col><b-badge pill variant="info">尺度</b-badge></b-col>
+                <b-col><b-badge variant="info"><span class="badge-size">尺度</span></b-badge></b-col>
                 <b-col><p><b-table striped bordered outlined small fixed :items="items" :fields="fields"></b-table></p></b-col>
             </div>
 
             <b-container class="bv-example-row">
                 <b-row align-h="start">
-                    <b-col cols="1"><b-badge pill variant="info">自己評点</b-badge></b-col>
+                    <b-col cols="5"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge></b-col>
+                    <b-col cols="5"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
+                </b-row>
+                <b-row align-h="start">
                     <b-col cols="3">
                         <div>
                             <b-form-select v-model="selected" :options="options"></b-form-select>
-                            <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
                         </div>
                     </b-col>
-                    <b-col cols="2"><b-badge pill variant="info">成果物ファイル</b-badge></b-col>
-                    <b-col cols="5">
+                    <b-col md="5" offset-md="2">
                         <template>
                             <div>
                                 <b-form-file
@@ -147,15 +156,18 @@
                                 placeholder="ファイルを選択"
                                 drop-placeholder="Drop file here..."
                                 ></b-form-file>
-                                <div class="mt-3">Selected file: {{ file1 ? file1.name : '' }}</div>
                             </div>
                         </template>
                     </b-col>
-                    <b-col cols="1"><b-icon icon="file-earmark-text"></b-icon></b-col>
+                    <b-col cols="1">
+                        <b-button v-b-tooltip.hover title="報告書(田中太郎).pdf" variant="outline-secondary">
+                            <b-icon icon="file-earmark-text" font-scale = "1.5"></b-icon>
+                        </b-button>
+                    </b-col>
                 </b-row>
 
                 <div class="comment">
-                    <b-badge pill variant="info">自己コメント</b-badge>
+                    <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                     <div>
                         <b-form-textarea
                         id="textarea"
@@ -168,7 +180,7 @@
                 </div>
             </b-container>
             <div class="button">
-                <b-button v-b-modal.modal-lg variant="info" @click="appendAchievement">{{modalButtonLabel}}</b-button>
+                <b-button v-b-modal.modal-lg variant="primary" @click="appendAchievement">{{modalButtonLabel}}</b-button>
             </div>
         </b-modal>
     </div>

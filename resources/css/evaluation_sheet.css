@@ -19,7 +19,7 @@
     justify-content: flex-end;
 }
 
-article {
+.eval-sheet-content {
     padding: 20px;
     margin: 15px;
     border: 1px solid #dbdbdc;
@@ -61,20 +61,4 @@ hr {
 .collapsed > .when-open,
 .not-collapsed > .when-closed {
   display: none;
-}
-
-.advice-content {
-    border: 1px solid #dbdbdc;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.record {
-    color: gray;
-}
-
-.policy-text {
-    background-color: #F2F2F2;
-    border-radius: 5px;
-    padding: 5px 15px;
 }

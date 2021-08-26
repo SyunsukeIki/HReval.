@@ -54,3 +54,15 @@
         },
     };
 </script>
+
+<style>
+.advice-content {
+    border: 1px solid #dbdbdc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.record {
+    color: gray;
+}
+</style>
