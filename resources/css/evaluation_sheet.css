@@ -23,6 +23,7 @@
     padding: 20px;
     margin: 15px;
     border: 1px solid #dbdbdc;
+    border-top : 5px solid #7db4e6;
 }
 
 .sub-heading {
@@ -62,3 +63,15 @@ hr {
 .not-collapsed > .when-closed {
   display: none;
 }
+
+.items {
+    margin-top: 30px;
+}
+
+.comment-text {
+    border: 1px solid #dbdbdc;
+    height: 150px;
+    display: flex;
+    align-items: baseline;
+}
+

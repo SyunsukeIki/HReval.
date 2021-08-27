@@ -5,12 +5,11 @@
                 <b-button v-b-toggle="collapse_id" variant="primary" class="m-1" size="sm" pill>
                     <span class="when-open">－</span><span class="when-closed">＋</span>
                 </b-button>
-                <h3 class="phase-text">{{phase}}</h3>
+                <h3 class="phase-text">{{phase}}成果</h3>
                 <span><b-button variant="outline-info" @click="edidEvent"><b-icon icon="pencil-fill"></b-icon> EDIT</b-button></span>
                 <b-collapse :id=collapse_id class="mt-2">
                     <b-card class="mt-2">
                         <h4 class="sub-heading">行動目標</h4>
-                        <div class="items">
                             <b-container class="bv-example-row">
                                 <b-row align-h="start">
                                     <b-col><p class="item-name"><b-badge variant="info" class="mr-3"><span class="badge-size">項目名</span></b-badge>在籍年数毎に求めるもの</p></b-col>
@@ -25,12 +24,11 @@
                                     <b-col cols="2"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
                                     <b-col cols="5"><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
                                 </b-row>
-                                <div class="comment">
+                                <div class="achieve-comment">
                                     <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                                     <p class="comment-text">しっかりできていたと思う。</p>
                                 </div>
                             </b-container>
-                        </div>
 
                         <hr>
                         
@@ -49,7 +47,7 @@
                                     <b-col cols="2"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
                                     <b-col cols="5"><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
                                 </b-row>
-                                <div class="comment">
+                                <div class="achieve-comment">
                                     <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                                     <p class="comment-text">しっかりできていたと思う。</p>
                                 </div>
@@ -73,7 +71,7 @@
                                     <b-col cols="2"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
                                     <b-col cols="5"><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
                                 </b-row>
-                                <div class="comment">
+                                <div class="achieve-comment">
                                     <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                                     <p class="comment-text">しっかりできていたと思う。</p>
                                 </div>
@@ -97,7 +95,7 @@
                                     <b-col cols="2"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
                                     <b-col cols="5"><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
                                 </b-row>
-                                <div class="comment">
+                                <div class="achieve-comment">
                                     <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                                     <p class="comment-text">しっかりできていたと思う。</p>
                                 </div>
@@ -107,7 +105,6 @@
 
                     <b-card class="mt-2">
                         <h4 class="sub-heading">数値目標</h4>
-                        <div class="items">
                             <b-container class="bv-example-row">
                                 <b-row align-h="start">
                                     <b-col><p class="item-name"><b-badge variant="info" class="mr-3"><span class="badge-size">項目名</span></b-badge>売上達成率</p></b-col>
@@ -122,12 +119,11 @@
                                     <b-col cols="2"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
                                     <b-col cols="5"><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
                                 </b-row>
-                                <div class="comment">
+                                <div class="achieve-comment">
                                     <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                                     <p class="comment-text">しっかりできていたと思う。</p>
                                 </div>
                             </b-container>
-                        </div>
                     </b-card>
                 </b-collapse>
             </div>
@@ -168,7 +164,7 @@
 .phase-text {
     display: inline;
     vertical-align: middle;
-    margin: 0 15px 0 15px;
+    margin: 0 15px;
     font-size: 20px;
     color: #526A9B;
     font-weight: bolder;
@@ -184,12 +180,8 @@
     height: 100px;
 }
 
-.comment {
+.achieve-comment {
     margin-top: 15px;
-}
-
-.items {
-    margin-top: 50px;
 }
 
 .item-name {

@@ -51,7 +51,7 @@
                     </b-col>
                 </b-row>
 
-                <div class="comment">
+                <div class="achieve-comment">
                     <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                     <div>
                         <b-form-textarea
@@ -107,7 +107,7 @@
                     </b-col>
                 </b-row>
 
-                <div class="comment">
+                <div class="achieve-comment">
                     <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                     <div>
                         <b-form-textarea
@@ -166,7 +166,7 @@
                     </b-col>
                 </b-row>
 
-                <div class="comment">
+                <div class="achieve-comment">
                     <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                     <div>
                         <b-form-textarea
@@ -188,7 +188,8 @@
 
 
 <script>
-import Achievement from "./Achievement.vue"
+    import Achievement from "./Achievement.vue"
+    import '../../../css/evaluation_sheet.css';
     export default {
         name: 'achievement-form',
         components:{Achievement},
@@ -250,25 +251,11 @@ import Achievement from "./Achievement.vue"
 </script>
 
 <style>
-.comment-text {
-    border: 1px solid #dbdbdc;
-    height: 150px;
-    display: flex;
-    align-items: baseline;
-}
 
-.comment {
+.achieve-comment {
     margin-top: 15px;
 }
 
-.evaluation-num {
-    display: inline;
-    border: 3px solid #7b98e3;
-    color: #7b98e3;
-    padding: 5px;
-    border-radius:10px;
-    margin-left: 20px;
-}
 
 .button {
     display:flex;

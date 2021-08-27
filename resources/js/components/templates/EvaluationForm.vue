@@ -1,44 +1,41 @@
 <template>
-    <div>
+    <div class="eval-sheet-content">
         <div class="evaluation">
             <evaluation v-for="item in evaluations" :key="item.id" :evaluation_num="item.evaluation_num" :collapse_id="item.id" :count_sm="count_sm"
                          @edit-event="openEditModal"
             />
         </div>
         <div class="button">
-            <b-button v-b-modal="'evaluation-modal'" variant="info" @click="openModal">評価登録</b-button>
+            <b-button v-b-modal="'evaluation-modal'" variant="primary" @click="openModal">評価登録</b-button>
         </div>
 
         <b-modal id="evaluation-modal" size="lg" :title="modalTitle" hide-footer>
-            <h4 class="theme">行動目標</h4>
+            <h4 class="sub-heading">行動目標</h4>
             <b-container class="bv-example-row">
                 <b-row align-h="start">
-                    <b-col cols="1"><b-badge pill variant="info">項目名</b-badge></b-col>
+                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
                     <b-col cols="5"><p class="label-text">在籍年数毎に求めるもの</p></b-col>
                 </b-row>
                 <b-row align-h="start">
-                    <b-col cols="1"><b-badge pill variant="info">内容</b-badge></b-col>
+                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目内容</span></b-badge></b-col>
                     <b-col cols="5"><p class="label-text">〇〇の資格を取る。</p></b-col>
                 </b-row>
                 <b-row align-h="start">
-                    <b-col cols="5"><b-badge pill variant="info">自己評点</b-badge><span class="label-text">3</span></b-col>
-                    <b-col cols="7"><b-badge pill variant="info">成果物ファイル</b-badge><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="file-earmark-text"></b-icon></b-col>
+                    <b-col cols="5"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge><span class="label-text">3</span></b-col>
+                    <b-col cols="7"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge><span class="label-text">報告書(田中太郎).pdf</span></b-col>
                 </b-row>
-                <div class="comment">
-                    <b-badge pill variant="info">自己コメント</b-badge>
+                <div class="eval-comment">
+                    <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                     <p class="comment-text">しっかりできていたと思う。</p>
                 </div>
                 <b-row align-h="start">
-                    <b-col cols="2"><b-badge pill variant="info">{{ count_sm }}次評点</b-badge></b-col>
-                    <b-col cols="3">
-                        <div>
-                            <b-form-select v-model="selected" :options="options"></b-form-select>
-                            <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
-                        </div>
-                    </b-col>
+                    <b-col><b-badge variant="info"><span class="badge-size">{{ count_sm }}次評点</span></b-badge></b-col>
                 </b-row>
-                <div class="comment">
-                    <b-badge pill variant="info">{{ count_sm }}次コメント</b-badge>
+                <b-row align-h="start">
+                    <b-col cols="3"><b-form-select v-model="selected" :options="options"></b-form-select></b-col>
+                </b-row>
+                <div class="eval-comment">
+                    <b-badge variant="info"><span class="badge-size">{{ count_sm }}次コメント</span></b-badge>
                     <div>
                         <b-form-textarea
                         id="textarea"
@@ -53,42 +50,34 @@
 
             <hr>
 
-            <h4 class="theme">数値目標</h4>
+            <h4 class="sub-heading">数値目標</h4>
             <b-container class="bv-example-row">
                 <b-row align-h="start">
-                    <b-col cols="1"><b-badge pill variant="info">項目名</b-badge></b-col>
+                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
                     <b-col cols="5"><p class="label-text">売上達成率</p></b-col>
                 </b-row>
             </b-container>
-            
             <div>
-                <b-col><b-badge pill variant="info">尺度</b-badge></b-col>
+                <b-col><b-badge variant="info"><span class="badge-size">尺度</span></b-badge></b-col>
                 <b-col><p><b-table striped bordered outlined small fixed :items="items" :fields="fields"></b-table></p></b-col>
             </div>
-
             <b-container class="bv-example-row">
                 <b-row align-h="start">
-                    <b-col cols="5"><b-badge pill variant="info">自己評点</b-badge><span class="label-text">3</span></b-col>
-                    <b-col cols="7"><b-badge pill variant="info">成果物ファイル</b-badge><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="file-earmark-text"></b-icon></b-col>
+                    <b-col cols="5"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge><span class="label-text">3</span></b-col>
+                    <b-col cols="7"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge><span class="label-text">報告書(田中太郎).pdf</span></b-col>
                 </b-row>
-
-                <div class="comment">
-                    <b-badge pill variant="info">自己コメント</b-badge>
+                <div class="eval-comment">
+                    <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
                     <p class="comment-text">しっかりできていたと思う。</p>
                 </div>
-
                 <b-row align-h="start">
-                    <b-col cols="2"><b-badge pill variant="info">{{ count_sm }}次評点</b-badge></b-col>
-                    <b-col cols="3">
-                        <div>
-                            <b-form-select v-model="selected" :options="options"></b-form-select>
-                            <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
-                        </div>
-                    </b-col>
+                    <b-col><b-badge variant="info"><span class="badge-size">{{ count_sm }}次評点</span></b-badge></b-col>
                 </b-row>
-
-                <div class="comment">
-                    <b-badge pill variant="info">{{ count_sm }}次コメント</b-badge>
+                <b-row align-h="start">
+                    <b-col cols="3"><b-form-select v-model="selected" :options="options"></b-form-select></b-col>
+                </b-row>
+                <div class="eval-comment">
+                    <b-badge variant="info"><span class="badge-size">{{ count_sm }}次コメント</span></b-badge>
                     <div>
                         <b-form-textarea
                         id="textarea"
@@ -101,7 +90,7 @@
                 </div>
             </b-container>
             <div class="button">
-                <b-button v-b-modal.modal-lg variant="info" @click="appendEvaluation">{{modalButtonLabel}}</b-button>
+                <b-button v-b-modal.modal-lg variant="primary" @click="appendEvaluation">{{modalButtonLabel}}</b-button>
             </div>
         </b-modal>
     </div>
@@ -110,6 +99,7 @@
 
 <script>
 import Evaluation from "./Evaluation.vue"
+import '../../../css/evaluation_sheet.css';
     export default {
         name: 'evaluation-form',
         components:{Evaluation},
@@ -173,29 +163,14 @@ import Evaluation from "./Evaluation.vue"
 </script>
 
 <style>
-.comment-text {
-    border: 1px solid #dbdbdc;
-    height: 150px;
-    display: flex;
-    align-items: baseline;
-}
-
-.comment {
-    margin-top: 15px;
-}
-
-.evaluation-num {
-    display: inline;
-    border: 3px solid #7b98e3;
-    color: #7b98e3;
-    padding: 5px;
-    border-radius:10px;
-    margin-left: 20px;
-}
 
 .button {
     display:flex;
     justify-content: center;
     margin: 20px;
+}
+
+.eval-comment {
+    margin-top: 15px;
 }
 </style>

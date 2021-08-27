@@ -39,8 +39,9 @@
 <style>
 .profile-content{
   margin: 30px 0 15px;
-  border : thick double #32a1ce;
-  padding: 10px;
+  border-top : 5px solid #2d8fdd;
+  padding: 15px;
+  background-color: #F2F2F2;
 }
 
  .profile-collapse {
