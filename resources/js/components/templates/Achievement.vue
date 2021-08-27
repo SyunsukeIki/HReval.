@@ -10,71 +10,127 @@
                 <b-collapse :id=collapse_id class="mt-2">
                     <b-card class="mt-2">
                         <h4 class="sub-heading">行動目標</h4>
-                        <b-container class="bv-example-row">
-                            <b-row align-h="start">
-                                <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
-                                <b-col cols="5"><p class="label-text">在籍年数毎に求めるもの</p></b-col>
-                            </b-row>
-                            <b-row align-h="start">
-                                <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目内容</span></b-badge></b-col>
-                                <b-col cols="5"><p class="label-text">〇〇の資格を取る。</p></b-col>
-                            </b-row>
-                            <b-row align-h="start">
-                                <b-col cols="5"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge><span class="label-text">3</span></b-col>
-                                <b-col cols="7"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="file-earmark-text" font-scale = "1.5"></b-icon></b-col>
-                            </b-row>
-                            <div class="comment">
-                                <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
-                                <p class="comment-text">しっかりできていたと思う。</p>
-                            </div>
-                        </b-container>
+                        <div class="items">
+                            <b-container class="bv-example-row">
+                                <b-row align-h="start">
+                                    <b-col><p class="item-name"><b-badge variant="info" class="mr-3"><span class="badge-size">項目名</span></b-badge>在籍年数毎に求めるもの</p></b-col>
+                                </b-row>
+                                <b-row align-h="start">
+                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目内容</span></b-badge></b-col>
+                                    <b-col cols="5"><p class="label-text">〇〇の資格を取る。</p></b-col>
+                                </b-row>
+                                <b-row align-h="start">
+                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge></b-col>
+                                    <b-col cols="4"><span class="label-text">3</span></b-col>
+                                    <b-col cols="2"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
+                                    <b-col cols="5"><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
+                                </b-row>
+                                <div class="comment">
+                                    <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
+                                    <p class="comment-text">しっかりできていたと思う。</p>
+                                </div>
+                            </b-container>
+                        </div>
+
+                        <hr>
+                        
+                        <div class="items">
+                            <b-container class="bv-example-row" >
+                                <b-row align-h="start">
+                                    <b-col><p class="item-name"><b-badge variant="info" class="mr-3"><span class="badge-size">項目名</span></b-badge>チームに貢献する</p></b-col>
+                                </b-row>
+                                <b-row align-h="start">
+                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目内容</span></b-badge></b-col>
+                                    <b-col cols="5"><p class="label-text">〇〇の資格を取る。</p></b-col>
+                                </b-row>
+                                <b-row align-h="start">
+                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge></b-col>
+                                    <b-col cols="4"><span class="label-text">3</span></b-col>
+                                    <b-col cols="2"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
+                                    <b-col cols="5"><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
+                                </b-row>
+                                <div class="comment">
+                                    <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
+                                    <p class="comment-text">しっかりできていたと思う。</p>
+                                </div>
+                            </b-container>
+                        </div>
 
                         <hr>
 
-                        <b-container class="bv-example-row">
-                            <b-row align-h="start">
-                                <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
-                                <b-col cols="5"><p class="label-text">チームに貢献する</p></b-col>
-                            </b-row>
-                            <b-row align-h="start">
-                                <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目内容</span></b-badge></b-col>
-                                <b-col cols="5"><p class="label-text">〇〇の資格を取る。</p></b-col>
-                            </b-row>
-                            <b-row align-h="start">
-                                <b-col cols="5"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge><span class="label-text">3</span></b-col>
-                                <b-col cols="7"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="file-earmark-text" font-scale = "1.5"></b-icon></b-col>
-                            </b-row>
-                            <div class="comment">
-                                <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
-                                <p class="comment-text">しっかりできていたと思う。</p>
-                            </div>
-                        </b-container>
+                        <div class="items">
+                            <b-container class="bv-example-row" >
+                                <b-row align-h="start">
+                                    <b-col><p class="item-name"><b-badge variant="info" class="mr-3"><span class="badge-size">項目名</span></b-badge>チームに貢献する</p></b-col>
+                                </b-row>
+                                <b-row align-h="start">
+                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目内容</span></b-badge></b-col>
+                                    <b-col cols="5"><p class="label-text">〇〇の資格を取る。</p></b-col>
+                                </b-row>
+                                <b-row align-h="start">
+                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge></b-col>
+                                    <b-col cols="4"><span class="label-text">3</span></b-col>
+                                    <b-col cols="2"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
+                                    <b-col cols="5"><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
+                                </b-row>
+                                <div class="comment">
+                                    <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
+                                    <p class="comment-text">しっかりできていたと思う。</p>
+                                </div>
+                            </b-container>
+                        </div>
+
+                        <hr>
+
+                        <div class="items">
+                            <b-container class="bv-example-row" >
+                                <b-row align-h="start">
+                                    <b-col><p class="item-name"><b-badge variant="info" class="mr-3"><span class="badge-size">項目名</span></b-badge>チームに貢献する</p></b-col>
+                                </b-row>
+                                <b-row align-h="start">
+                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目内容</span></b-badge></b-col>
+                                    <b-col cols="5"><p class="label-text">〇〇の資格を取る。</p></b-col>
+                                </b-row>
+                                <b-row align-h="start">
+                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge></b-col>
+                                    <b-col cols="4"><span class="label-text">3</span></b-col>
+                                    <b-col cols="2"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
+                                    <b-col cols="5"><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
+                                </b-row>
+                                <div class="comment">
+                                    <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
+                                    <p class="comment-text">しっかりできていたと思う。</p>
+                                </div>
+                            </b-container>
+                        </div>
                     </b-card>
 
                     <b-card class="mt-2">
                         <h4 class="sub-heading">数値目標</h4>
-                        <b-container class="bv-example-row">
-                            <b-row align-h="start">
-                                <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
-                                <b-col cols="5"><p class="label-text">売上達成率</p></b-col>
-                            </b-row>
-                            <b-badge variant="info"><span class="badge-size">尺度</span></b-badge>
-                            <p><b-table striped bordered outlined small fixed :items="items" :fields="fields"></b-table></p>
-                        </b-container>
-                        <b-container class="bv-example-row">
-                            <b-row align-h="start">
-                                <b-col cols="5"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge><span class="label-text">4</span></b-col>
-                                <b-col cols="4"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge><span class="label-text">file.xlsx</span><b-icon icon="file-earmark-text" font-scale = "1.5"></b-icon></b-col>
-                            </b-row>
-                            <div class="comment">
-                                <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
-                                <p class="comment-text">しっかりできていたと思う。</p>
-                            </div>
-                        </b-container>
+                        <div class="items">
+                            <b-container class="bv-example-row">
+                                <b-row align-h="start">
+                                    <b-col><p class="item-name"><b-badge variant="info" class="mr-3"><span class="badge-size">項目名</span></b-badge>売上達成率</p></b-col>
+                                </b-row>
+                                <b-badge variant="info"><span class="badge-size">尺度</span></b-badge>
+                                <p><b-table striped bordered outlined small fixed :items="items" :fields="fields"></b-table></p>
+                            </b-container>
+                            <b-container class="bv-example-row">
+                                <b-row align-h="start">
+                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge></b-col>
+                                    <b-col cols="4"><span class="label-text">3</span></b-col>
+                                    <b-col cols="2"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge></b-col>
+                                    <b-col cols="5"><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
+                                </b-row>
+                                <div class="comment">
+                                    <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
+                                    <p class="comment-text">しっかりできていたと思う。</p>
+                                </div>
+                            </b-container>
+                        </div>
                     </b-card>
                 </b-collapse>
             </div>
-            
         </section>
     </article>
 </template>
@@ -115,6 +171,7 @@
     margin: 0 15px 0 15px;
     font-size: 20px;
     color: #526A9B;
+    font-weight: bolder;
 }
 
 
@@ -129,6 +186,26 @@
 
 .comment {
     margin-top: 15px;
+}
+
+.items {
+    margin-top: 50px;
+}
+
+.item-name {
+  border-bottom: solid 3px #C1D3E0;
+  position: relative;
+  color: #5f6368;
+  font-size: 18px;
+}
+
+.item-name:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #526A9B;
+  bottom: -3px;
+  width: 20%;
 }
 
 </style>
