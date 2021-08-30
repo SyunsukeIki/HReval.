@@ -22,7 +22,7 @@
                 </b-row>
                 <b-row align-h="start">
                     <b-col cols="5"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge><span class="label-text">3</span></b-col>
-                    <b-col cols="7"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge><span class="label-text">報告書(田中太郎).pdf</span></b-col>
+                    <b-col cols="7"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
                 </b-row>
                 <div class="eval-comment">
                     <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
@@ -64,7 +64,7 @@
             <b-container class="bv-example-row">
                 <b-row align-h="start">
                     <b-col cols="5"><b-badge variant="info"><span class="badge-size">自己評点</span></b-badge><span class="label-text">3</span></b-col>
-                    <b-col cols="7"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge><span class="label-text">報告書(田中太郎).pdf</span></b-col>
+                    <b-col cols="7"><b-badge variant="info"><span class="badge-size">成果物ファイル</span></b-badge><span class="label-text">報告書(田中太郎).pdf</span><b-icon icon="download" font-scale = "1.5"></b-icon></b-col>
                 </b-row>
                 <div class="eval-comment">
                     <b-badge variant="info"><span class="badge-size">自己コメント</span></b-badge>
