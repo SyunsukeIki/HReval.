@@ -6,6 +6,7 @@
                     <span class="when-open">－</span><span class="when-closed">＋</span>
                 </b-button>
                 <h3 class="phase-text">{{phase}}成果</h3>
+                <b-badge variant="info"><span class="badge-size">登録日</span></b-badge><span class="label-text">2021/07/26</span>
                 <span><b-button variant="outline-info" @click="edidEvent"><b-icon icon="pencil-fill"></b-icon> EDIT</b-button></span>
                 <b-collapse :id=collapse_id class="mt-2">
                     <b-card class="mt-2">
