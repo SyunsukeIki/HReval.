@@ -1,13 +1,17 @@
 <template>
     <div class="sec-content">
-        <b-button variant="primary" v-b-toggle.collapse-1 class="m-1" size="sm" pill>
-            <span class="when-open">－</span><span class="when-closed">＋</span>
-        </b-button>
-        <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge><span class="label-text">リーダーが数字を把握しているのかどうか</span>
-        <span class="memo-btn">
-            <memo-first memo1_modal_id="first_target_memo" />
-        </span>
-        
+        <b-row>
+            <b-col cols="10">
+                <b-button variant="primary" v-b-toggle.collapse-1 class="m-1" size="sm" pill>
+                    <span class="when-open">－</span><span class="when-closed">＋</span>
+                </b-button>
+                 <b-badge variant="info" >
+                <span class="badge-size">項目名</span></b-badge><span class="label-text">リーダーが数字を把握しているのかどうか</span>
+            </b-col>
+            <b-col class="text-right">
+                <memo-first memo1_modal_id="first_target_memo" />
+            </b-col>     
+        </b-row>       
         <b-collapse id="collapse-1" class="mt-2">
             <b-card>
                 <b-badge variant="info" ><span class="badge-size">項目概要</span></b-badge>
