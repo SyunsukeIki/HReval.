@@ -33,6 +33,10 @@
         <!-- 数値目標の目標項目 -->
         <num-target-sec />
 
+        <memo memo_modal_id="first_target_memo" :memo_item=items[0] :memo_item_detail=details[0] />
+        <memo memo_modal_id="second_target_memo" :memo_item=items[1] :memo_item_detail=details[0] />
+        <memo memo_modal_id="num_target_memo" :memo_item=items[0] :memo_item_detail=details[0] />
+
         <!-- 下部ボタン -->
         <div class="bottom-btn">
             <div class="judge-btn">
@@ -51,11 +55,23 @@
     import FirstTargetSec from './First_target_sec.vue';
     import SecondTargetSec from './Second_target_sec.vue';
     import NumTargetSec from './Num_target_sec.vue';
+    import Memo from '../atoms/Memo.vue';
     import '../../../css/evaluation_sheet.css';
 
     export default {
         name: 'set-target',
-        components: {FirstTargetSec, SecondTargetSec, NumTargetSec},
+        components: {FirstTargetSec, SecondTargetSec, NumTargetSec,Memo},
+        data() {
+            return {
+                items:[
+                    "①在籍年数毎に求めるもの",
+                    "②チームに貢献する",
+                ],
+                details:[
+                    "自分のことがきちんとできるようになる。社員としての基本を身につける。",
+                ]
+            }
+        },
     };
 </script>
 

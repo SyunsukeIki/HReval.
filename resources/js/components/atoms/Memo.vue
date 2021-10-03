@@ -1,12 +1,12 @@
 <template>
     <div class="memo">
-        <b-button variant="outline-info" v-b-modal="memo2_modal_id"><b-icon icon="journal-text" aria-hidden="true"></b-icon> MEMO</b-button>
-        <b-modal :id=memo2_modal_id title="メモ" hide-footer size="lg">
+        <b-modal :id=memo_modal_id title="MEMO" hide-footer size="lg">
             <b-badge variant="info"><span class="badge-size">目標項目</span></b-badge>
-            <p>②チームに貢献する</p>
-            <br>
-            <b-badge variant="info"><span class="badge-size">目標内容</span></b-badge>
-            <p>自分のことがきちんとできるようになる。社員としての基本を身につける。</p>
+            <p class="label-text">{{memo_item}}</p>
+            <div>
+                <b-badge variant="info"><span class="badge-size">目標内容</span></b-badge>
+                <p class="label-text">{{memo_item_detail}}</p>
+            </div>
             <hr>
             <b-badge variant="info"><span class="badge-size">メモ一覧</span></b-badge>
             <template>
@@ -24,7 +24,6 @@
                     rows="3"
                     max-rows="6"
                     ></b-form-textarea>
-
                     <pre class="mt-3 mb-0">{{ text }}</pre>
                 </div>
             </template>
@@ -41,8 +40,11 @@
 
 <script>
     export default {
-        name: 'memo-second',
-        props:{memo2_modal_id:null,
+        name: 'memo',
+        props:{
+            memo_modal_id:null,
+            memo_item:null,
+            memo_item_detail:null,
         },
         data() {
             return {

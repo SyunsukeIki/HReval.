@@ -9,7 +9,7 @@
                 <span class="badge-size">項目名</span></b-badge><span class="label-text">リーダーが数字を把握しているのかどうか</span>
             </b-col>
             <b-col class="text-right">
-                <memo-first memo1_modal_id="first_target_memo" />
+                <b-button variant="outline-info" v-b-modal.first_target_memo><b-icon icon="journal-text" aria-hidden="true"></b-icon> MEMO</b-button>
             </b-col>     
         </b-row>       
         <b-collapse id="collapse-1" class="mt-2">
@@ -28,11 +28,12 @@
 </template>
 
 <script>
-    import MemoFirst from '../atoms/Memo_First.vue';
     import '../../../css/evaluation_sheet.css';
     export default {
         name: 'first-target-sec',
-        components: {MemoFirst},
-        
+        data() {
+            return {
+            }
+        },
     };
 </script>

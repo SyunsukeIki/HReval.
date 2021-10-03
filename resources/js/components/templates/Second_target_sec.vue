@@ -2,14 +2,14 @@
     <div class="sec-content">
                 <b-row>
             <b-col cols="10">
-                <b-button variant="primary" v-b-toggle.collapse-1 class="m-1" size="sm" pill>
+                <b-button variant="primary" v-b-toggle.collapse-2 class="m-1" size="sm" pill>
                     <span class="when-open">－</span><span class="when-closed">＋</span>
                 </b-button>
                  <b-badge variant="info" >
                 <span class="badge-size">項目名</span></b-badge><span class="label-text">リーダーが数字を把握しているのかどうか</span>
             </b-col>
             <b-col class="text-right">
-                <memo-second memo2_modal_id="second_target_memo2" class="d-flex justify-content-end"/>
+                <b-button variant="outline-info" v-b-modal.second_target_memo><b-icon icon="journal-text" aria-hidden="true"></b-icon> MEMO</b-button>
             </b-col>     
         </b-row>    
         <b-collapse id="collapse-2" class="mt-2">
@@ -28,11 +28,13 @@
 </template>
 
 <script>
-    import MemoSecond from '../atoms/Memo_Second.vue';
     import '../../../css/evaluation_sheet.css';
     export default {
         name: 'second-target-sec',
-        components: {MemoSecond},
+        data() {
+            return {
+            }
+        },
     };
 </script>
 
