@@ -11,7 +11,7 @@
                 text="MENU"
                 class="m-md-2"
               >
-              <b-dropdown-item href="#">プロフィール!</b-dropdown-item>
+              <b-dropdown-item href="#">プロフィール</b-dropdown-item>
               <b-dropdown-item href="#">ヘルプ</b-dropdown-item>
               <b-dropdown-item href="#">設定</b-dropdown-item>
    	          <b-dropdown-item href="#">ログアウト</b-dropdown-item>
