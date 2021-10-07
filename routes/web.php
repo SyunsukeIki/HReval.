@@ -21,3 +21,9 @@ Route::view('/sheetlist', 'sheet-list');
 
 Route::view('/userlist', 'user-list');
 
+Route::view('/aimtemplatelist', 'aimtemplate-list');
+
+Route::view('/templatedetail', 'template-detail');
+
+Route::view('/newaimtemplate', 'new-aimtemplate');
+

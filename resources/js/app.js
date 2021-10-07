@@ -19,6 +19,9 @@ Vue.component('profile', require('./components/templates/Profile.vue').default);
 Vue.component('eval-sheet-bottom', require('./components/templates/EvalutionSheetBottom.vue').default);
 Vue.component('sheet-list', require('./components/pages/SheetList.vue').default);
 Vue.component('user-list', require('./components/pages/UserList.vue').default);
+Vue.component('aimtemplate-list', require('./components/pages/AimTemplateList.vue').default);
+Vue.component('template-detail', require('./components/pages/TemplateDetail.vue').default);
+Vue.component('new-aimtemplate', require('./components/pages/NewAimTemplate').default);
 
 const app = new Vue({
     el: '#app',   

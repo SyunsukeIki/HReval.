@@ -7,6 +7,7 @@
           <li><a href="#">組織図</a></li>
           <li><a href="/sheetlist">評価シート一覧</a></li>
           <li><a href="/userlist">ユーザー一覧</a></li>
+          <li><a href="/aimtemplatelist">目標シートテンプレート一覧</a></li>
         </ol>
       </div>
     </b-sidebar>
