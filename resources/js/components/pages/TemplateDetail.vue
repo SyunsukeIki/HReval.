@@ -2,17 +2,22 @@
         <article>
             <section>
                 <h1 class="title">目標シートテンプレート<br>詳細</h1>
-                <h2>テンプレート名</h2>
+                <div class="sec-content">
+                    <div class=item1>
+                        <h2>テンプレート名</h2>
+                        <div class="templatename">一般社員_2020</div>
+                    </div>
+                </div>
             </section>
             <div class="sec-content">
                     <h4 class="sub-heading">目標種別　　行動目標</h4>
-                    
+                      <b-col>
                         <div class="item3">
-                            <b-badge variant="info" class="mr-3"></b-badge>分類名　　　　社員に求める行動目標
+                            <b-badge variant="info" class="mr-3">分類名</b-badge>社員に求める行動目標
                             <b-badge variant="info" class="item-name2"><span class="badge-size">ウェイト</span></b-badge>
                             <div class="amount">50</div>    
                         </div>
-                    
+                      </b-col>
                     <b-card class="mt-2">
                             <b-container class="bv-example-row">
                                 <b-row align-h="start">
@@ -42,11 +47,10 @@
                     <h4 class="sub-heading">目標種別　　数値目標</h4>
                     <b-col>
                         <div class="item3">
-                            <b-badge variant="info" class="mr-3"></b-badge>分類名　　　　社員に求める数値目標
+                            <b-badge variant="info" class="mr-3">分類名</b-badge>社員に求める数値目標
                             <b-badge variant="info" class="item-name2"><span class="badge-size">ウェイト</span></b-badge>
                             <div class="amount">50</div>                    
-                        </div> 
-                                                
+                        </div>                                                 
                     </b-col>
                     <b-card class="mt-2">
                             <b-container class="bv-example-row">
@@ -82,7 +86,8 @@
                             </b-container>
                     </b-card>
             </div>
-            <div class="button">
+            <div class="buttons">
+                <b-button variant="success" ><div class="backbutton"><a href="/aimtemplatelist">戻る</a></div></b-button>
                 <b-button variant="primary">編集</b-button>
                 <b-button variant="danger">削除</b-button>
             </div>
@@ -109,12 +114,20 @@ section {
     color: #636363;
     line-height: 46px;
 }
+.item1{
+    display: flex;
+    justify-content: flex-start   
+}
+.templatename{
+    margin-right: 10px;
+}
 
 h2{
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #636363;
     font-size: 20px;
     margin-left: 10px;
+    margin-right: 25px;
     font-weight: bold;
 }
 .item3{
@@ -140,9 +153,14 @@ h2{
     margin: 10px 0 15px;
     padding: 10px;
 }
-.button{
+.buttons{
     display: flex;
     justify-content: center;
 }
-    
+.buttons a{
+    color: #fff;
+}
+.buttons a:hover{
+    color: #fff;
+}
 </style>

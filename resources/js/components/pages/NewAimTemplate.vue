@@ -10,13 +10,12 @@
             <div class="sec-content">
                 <div class="top">
                     <h4 class="sub-heading">目標種別</h4>
-                    <input type="radio" id="one" value="action" v-model="picked" name="aimkinds" class="radiobutton">
+                    <input type="radio" id="one" value="action" v-model="picked" name="aimkinds1" class="radiobutton">
                     <label for="one">行動目標</label>
-                    <input type="radio" id="two" value="amount" v-model="picked" name="aimkinds" class="radiobutton">
+                    <input type="radio" id="two" value="amount" v-model="picked" name="aimkinds1" class="radiobutton">
                     <label for="two">数値目標</label>
                 </div>
-                    <b-col>
-                        <div class="item-name">
+                <div class="item1">
                             <b-badge variant="info" ><span class="badge-size">分類名</span></b-badge>
                             <div class="input2">
                                 <b-form-input v-model="text" placeholder="分類名を入力してください" class="input2"></b-form-input>
@@ -25,81 +24,93 @@
                             <div class="input3">
                                 <b-form-input v-model="text" ></b-form-input>
                             </div>                           
-                        </div>
-                    </b-col>
-                    <b-card class="mt-2">
-                            <b-container class="bv-example-row">
-                                <b-row align-h="start">
-                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
-                                    <b-col cols="5"><p class="label-text">メンバーへの適切な指導</p></b-col>
-                                </b-row>
-                                <b-row align-h="start">
-                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">詳細</span></b-badge></b-col>
-                                    <b-col cols="5"><p class="label-text">自分のことがきちんとできる（基本のルール）</p></b-col>
-                                </b-row>
-                            </b-container>
-                    </b-card>
-                    <b-card class="mt-2">
-                            <b-container class="bv-example-row">
-                                <b-row align-h="start">
-                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
-                                    <b-col cols="10"><p class="label-text">メンバーへの適切な指導</p></b-col>
-                                </b-row>
-                                <b-row align-h="start">
-                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">詳細</span></b-badge></b-col>
-                                    <b-col cols="10"><p class="label-text">自分のことがきちんとできる（基本のルール）</p></b-col>
-                                </b-row>
-                            </b-container>
-                    </b-card>
+                </div>
+                <b-card class="mt-2">
+                    <b-container class="bv-example-row">
+                            <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
+                            <div class="input2">
+                                <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
+                            </div>
+                            <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
+                            <div>
+                                <b-form-textarea
+                                id="textarea"
+                                v-model="text"
+                                placeholder="詳細を入力してください"
+                                rows="3"
+                                max-rows="6"
+                                ></b-form-textarea>
+
+                                <pre class="mt-3 mb-0">{{ text }}</pre>
+                            </div>
+                            <div class="deletebutton"><b-button>項目削除</b-button></div>                      
+                    </b-container>
+                </b-card>
+                <b-card class="mt-2">
+                    <b-container class="bv-example-row">
+                            <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
+                            <div class="input2">
+                                <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
+                            </div>
+                            <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
+                            <div>
+                                <b-form-textarea
+                                id="textarea"
+                                v-model="text"
+                                placeholder="詳細を入力してください"
+                                rows="3"
+                                max-rows="6"
+                                ></b-form-textarea>
+
+                                <pre class="mt-3 mb-0">{{ text }}</pre>
+                            </div>
+                            <div class="deletebutton" ><b-button>項目削除</b-button></div>                      
+                    </b-container>
+                </b-card>
+                <div class="newbutton"><b-button variant="primary">項目追加</b-button></div>
             </div>
             <div class="sec-content">
-                    <h4 class="sub-heading">目標種別　　数値目標</h4>
-                    <b-col>
-                        <div class="item-name">
-                            <b-badge variant="info" class="mr-3"></b-badge>分類名　　　　社員に求める数値目標
-                            <b-badge variant="info" class="item-name2"><span class="badge-size">ウェイト</span></b-badge>
-                            <div class="amount">50</div>                    
-                        </div> 
-                                                
-                    </b-col>
-                    <b-card class="mt-2">
-                            <b-container class="bv-example-row">
-                                <b-row align-h="start">
-                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
-                                    <b-col cols="10"><p class="label-text">売上達成率</p></b-col>
-                                </b-row>
-                                <b-row align-h="start">
-                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">詳細</span></b-badge></b-col>
-                                    <b-col cols="10"><p class="label-text">自分自身の売上達成率で計算して下さい。病気などによる長期離脱やその他イレギュラーによる未達は都度考慮します。</p></b-col>
-                                </b-row>
-                            </b-container>
-                    </b-card>
-                    <b-card class="mt-2">
-                            <b-container class="bv-example-row">
-                                <b-row align-h="start">
-                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">項目名</span></b-badge></b-col>
-                                    <b-col cols="10"><p class="label-text">客先評価</p></b-col>
-                                </b-row>  
-                                <b-row align-h="start">
-                                    <b-col cols="1"><b-badge variant="info"><span class="badge-size">詳細</span></b-badge></b-col>
-                                    <b-col cols="10">
-                                        <p class="label-text">
-                                        1 　　69%以下<br>
-                                        2 　　70~75%達成<br>
-                                        3 　　76~85%達成<br>
-                                        4 　　86~95%達成<br>
-                                        5 　　96~99%達成<br>
-                                        6 　　100%達成<br>
-                                        </p>
-                                    </b-col>
-                                </b-row>
-                            </b-container>
-                    </b-card>
+                <div class="top">
+                    <h4 class="sub-heading">目標種別</h4>
+                    <input type="radio" id="one" value="action" v-model="picked" name="aimkinds2" class="radiobutton">
+                    <label for="one">行動目標</label>
+                    <input type="radio" id="two" value="amount" v-model="picked" name="aimkinds2" class="radiobutton">
+                    <label for="two">数値目標</label>
+                </div>
+                <div class="item1">
+                            <b-badge variant="info" ><span class="badge-size">分類名</span></b-badge>
+                            <div class="input2">
+                                <b-form-input v-model="text" placeholder="分類名を入力してください" class="input2"></b-form-input>
+                            </div>
+                            <b-badge variant="info" class="badge2"><span class="badge-size" >ウェイト</span></b-badge>
+                            <div class="input3">
+                                <b-form-input v-model="text" ></b-form-input>
+                            </div>                           
+                </div>
+                <b-card class="mt-2">
+                    <b-container class="bv-example-row">
+                            <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
+                            <div class="input2">
+                                <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
+                            </div>
+                            <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
+                            <div>
+                                <b-form-textarea
+                                id="textarea"
+                                v-model="text"
+                                placeholder="詳細を入力してください"
+                                rows="3"
+                                max-rows="6"
+                                ></b-form-textarea>
+
+                                <pre class="mt-3 mb-0">{{ text }}</pre>
+                            </div>
+                            <div class="deletebutton"><b-button>項目削除</b-button></div>                      
+                    </b-container>
+                </b-card>
+                <div class="newbutton"><b-button variant="primary">項目追加</b-button></div>
             </div>
-            <div class="button">
-                <b-button variant="primary">編集</b-button>
-                <b-button variant="danger">削除</b-button>
-            </div>
+            <b-button variant="primary">保存</b-button>
         </article>
 </template>
 
@@ -111,6 +122,12 @@
 </script>
 
 <style>
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
 .input1{
     margin-left: 10px;
     width:80%;
@@ -132,8 +149,21 @@
     height: 35px;
     font-size: 18px;
 }
+
 .badge2{
     margin-left: 60px;
+}
+
+.item2{
+    display: flex;
+    flex-direction: column;
+}
+.deletebutton{
+    float: right;
+}
+.newbutton{
+    margin-top: 10px;
+    margin-left: 930px;
 }
 
 .radiobutton{
