@@ -128,6 +128,11 @@ article{
     justify-content: center;
     margin-bottom: 50px;
 }
+.top{
+   display: flex;
+   justify-content: flex-start;
+   margin-top:10px;
+}
 .input1{
     margin-left: 10px;
     width:80%;
@@ -140,11 +145,7 @@ article{
     margin :0 2px 3px 3px;
     width: 100px;
 }
-.top{
-   display: flex;
-   justify-content: flex-start;
-   margin-top:10px;
-}
+
 .badge{
     height: 35px;
     font-size: 18px;
