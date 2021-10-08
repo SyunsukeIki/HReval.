@@ -1,12 +1,12 @@
 <template>
         <article>
-            <section>
-                <h1 class="title">目標シートテンプレート<br>新規作成</h1>
-                <h2>テンプレート名</h2>
+            <h1 class="title">目標シートテンプレート<br>新規作成</h1>
+            <div class="top-content">
+                <span class="badge badge-info"><span class="badge-size">テンプレート名</span></span>
                 <div class="input1">
                     <b-form-input v-model="text" placeholder="テンプレート名を入力してください"></b-form-input>
                 </div>
-            </section>
+            </div>
             <div class="sec-content">
                 <div class="top">
                     <h4 class="sub-heading">目標種別</h4>
@@ -20,11 +20,12 @@
                             <div class="input2">
                                 <b-form-input v-model="text" placeholder="分類名を入力してください" class="input2"></b-form-input>
                             </div>
-                            <b-badge variant="info" class="badge2"><span class="badge-size" >ウェイト</span></b-badge>
+                            <b-badge variant="info"><span class="badge-size" >ウェイト</span></b-badge>
                             <div class="input3">
                                 <b-form-input v-model="text" ></b-form-input>
                             </div>                           
-                </div>
+                </div>                     
+
                 <b-card class="mt-2">
                     <b-container class="bv-example-row">
                             <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
@@ -82,14 +83,14 @@
                             <div class="input2">
                                 <b-form-input v-model="text" placeholder="分類名を入力してください" class="input2"></b-form-input>
                             </div>
-                            <b-badge variant="info" class="badge2"><span class="badge-size" >ウェイト</span></b-badge>
+                            <b-badge variant="info"><span class="badge-size" >ウェイト</span></b-badge>
                             <div class="input3">
                                 <b-form-input v-model="text" ></b-form-input>
                             </div>                           
                 </div>
                 <b-card class="mt-2">
                     <b-container class="bv-example-row">
-                            <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
+                            <b-badge variant="info" ><span>項目名</span></b-badge>
                             <div class="input2">
                                 <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
                             </div>
@@ -128,6 +129,22 @@ article{
     justify-content: center;
     margin-bottom: 50px;
 }
+.top-content{
+    display: flex;
+    justify-content: flex-start;
+    margin: 30px 0 15px;
+    border-top : 5px solid #2d8fdd;
+    padding: 15px;
+    background-color: #F2F2F2;
+}
+.sec-content{
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #dbdbdc;
+    border-top : 5px solid #7db4e6;
+    background-color: #fff;
+}
+
 .top{
    display: flex;
    justify-content: flex-start;
@@ -138,11 +155,11 @@ article{
     width:80%;
 }
 .input2{
-    margin :0 2px 3px 3px;
-    width: 500px;
+    margin :0 10px 2px 3px;
+    width:350px;
 }
 .input3{
-    margin :0 2px 3px 3px;
+    margin-left: 2px;
     width: 100px;
 }
 
@@ -151,8 +168,8 @@ article{
     font-size: 18px;
 }
 
-.badge2{
-    margin-left: 60px;
+.item1{
+    display: flex;
 }
 
 .item2{
