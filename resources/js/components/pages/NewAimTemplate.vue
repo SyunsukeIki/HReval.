@@ -28,9 +28,11 @@
 
                 <b-card class="mt-2">
                     <b-container class="bv-example-row">
-                            <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
-                            <div class="input2">
-                                <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
+                            <div class="item1">
+                                <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
+                                <div class="input2">
+                                    <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
+                                </div>
                             </div>
                             <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
                             <div>
@@ -49,9 +51,11 @@
                 </b-card>
                 <b-card class="mt-2">
                     <b-container class="bv-example-row">
-                            <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
-                            <div class="input2">
-                                <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
+                            <div class="item1">
+                                <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
+                                <div class="input2">
+                                    <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
+                                </div>
                             </div>
                             <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
                             <div>
@@ -90,9 +94,11 @@
                 </div>
                 <b-card class="mt-2">
                     <b-container class="bv-example-row">
-                            <b-badge variant="info" ><span>項目名</span></b-badge>
-                            <div class="input2">
-                                <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
+                            <div class="item1">
+                                <b-badge variant="info" ><span>項目名</span></b-badge>
+                                <div class="input2">
+                                    <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
+                                </div>
                             </div>
                             <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
                             <div>
