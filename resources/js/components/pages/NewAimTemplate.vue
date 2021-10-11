@@ -34,8 +34,8 @@
                                     <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
                                 </div>
                             </div>
-                            <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
-                            <div>
+                                <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
+                            <div class="form">
                                 <b-form-textarea
                                 id="textarea"
                                 v-model="text"
@@ -43,7 +43,6 @@
                                 rows="3"
                                 max-rows="6"
                                 ></b-form-textarea>
-
                                 <pre class="mt-3 mb-0">{{ text }}</pre>
                             </div>
                             <div class="deletebutton"><b-button>項目削除</b-button></div>                      
@@ -58,7 +57,7 @@
                                 </div>
                             </div>
                             <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
-                            <div>
+                            <div class="form">
                                 <b-form-textarea
                                 id="textarea"
                                 v-model="text"
@@ -101,7 +100,7 @@
                                 </div>
                             </div>
                             <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
-                            <div>
+                            <div class="form">
                                 <b-form-textarea
                                 id="textarea"
                                 v-model="text"
@@ -191,12 +190,20 @@ article{
     display: flex;
     flex-direction: column;
 }
+.form{
+    margin-top: 5px;
+}
+.badge-space{
+    margin-bottom: 3px;
+}
 .deletebutton{
     float: right;
 }
 .newbutton{
     margin-top: 10px;
-    margin-left: 930px;
+    margin-right: 35px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .radiobutton{
@@ -211,7 +218,8 @@ label{
 
 .save-button{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 30px;
 }
 
 
