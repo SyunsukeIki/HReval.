@@ -15,24 +15,28 @@
             </section>
             <hr>
             <div class="sec-content">
-                <b-row>
-                    <b-col cols="10">
-                        <b-badge variant="info" >
-                        <span class="badge-size">項目名</span></b-badge><span class="label-text">リーダーが数字を把握しているのかどうか</span>
-                    </b-col>  
-                </b-row>       
+                <div class="item">
+                    <b-row>
+                        <b-col cols="10">
+                            <b-badge variant="info" >
+                            <span class="badge-size">項目名</span></b-badge><span class="label-text">リーダーが数字を把握しているのかどうか</span>
+                        </b-col>  
+                    </b-row>
+                </div>       
                 <b-card>
                     <b-badge variant="info" ><span class="badge-size">項目詳細</span></b-badge>
                     <p class="card-text">【4年目以降】後輩と現場に入る<br>【3年目】後輩の指導ができる<br>【2年目】後輩の面倒をみれる（相談相手になる）<br>【1年目】自分のことがきちんとできる（基本のルール）・社員としての基本 </p>
                 </b-card>
             </div>
             <div class="sec-content">
-                <b-row>
-                    <b-col cols="10">
-                        <b-badge variant="info" >
-                        <span class="badge-size">項目名</span></b-badge><span class="label-text">チームに貢献する</span>
-                    </b-col>  
-                </b-row>       
+                <div class="item">
+                    <b-row>
+                        <b-col cols="10">
+                            <b-badge variant="info" >
+                            <span class="badge-size">項目名</span></b-badge><span class="label-text">チームに貢献する</span>
+                        </b-col>  
+                    </b-row>  
+                </div>     
                 <b-card>
                     <b-badge variant="info" ><span class="badge-size">項目詳細</span></b-badge>
                     <p class="card-text">チームの人との仲を深める </p>
@@ -51,12 +55,14 @@
             </section>
             <hr>
             <div class="sec-content">
-                <b-row>
-                    <b-col cols="10">
-                        <b-badge variant="info" >
-                        <span class="badge-size">項目名</span></b-badge><span class="label-text">売上達成率</span>
-                    </b-col>  
-                </b-row>       
+                <div class="item">
+                    <b-row>
+                        <b-col cols="10">
+                            <b-badge variant="info" >
+                            <span class="badge-size">項目名</span></b-badge><span class="label-text">売上達成率</span>
+                        </b-col>  
+                    </b-row>       
+                </div>
                 <b-card>
                     <b-badge variant="info" ><span class="badge-size">項目詳細</span></b-badge>
                     <p class="card-text">自分自身を含めたチームの平均値で測定する </p>
@@ -85,12 +91,15 @@
     color: #636363;
     line-height: 46px;
 }
+.item{
+    margin-bottom: 5px;
+}
 .badge-size2{
     margin-top: 2px;
 }
 .buttons{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .buttons a{
     color: #fff;
