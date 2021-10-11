@@ -2,7 +2,14 @@
         <article>
             <section>
                 <h1 class="title">目標シートテンプレート<br>一覧</h1>
-                <div><b-button variant="primary" href="/newaimtemplate">新規作成</b-button></div>
+                <div class="buttons">
+                    <div class="new-button">
+                        <b-button variant="primary" href="/newaimtemplate">新規作成</b-button>
+                    </div>
+                    <div>
+                        <b-button variant="success" href="/templatedistribution">テンプレート配布</b-button>
+                    </div>
+                </div>
             </section>
                 <div class="sheetlist-table">
                     <b-table striped hover :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage">
@@ -90,7 +97,6 @@
 section {
    display: flex;
    flex-direction: column;
-   align-items: flex-start;
 }
 .title{
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -99,6 +105,13 @@ section {
     font-size: 32px;
     color: #636363;
     line-height: 46px;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+.new-button{
+    margin-right:3px;
 }
 
 .sheetlist-table {

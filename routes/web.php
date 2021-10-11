@@ -27,3 +27,5 @@ Route::view('/templatedetail', 'template-detail');
 
 Route::view('/newaimtemplate', 'new-aimtemplate');
 
+Route::view('/templatedistribution', 'template-distribution');
+
