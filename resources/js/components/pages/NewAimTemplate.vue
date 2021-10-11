@@ -117,7 +117,7 @@
                 </b-card>
                 <div class="newbutton"><b-button variant="primary">項目追加</b-button></div>
             </div>
-            <b-button variant="primary">保存</b-button>
+            <div class="save-button"><b-button variant="primary">保存</b-button></div>
         </article>
 </template>
 
@@ -135,6 +135,15 @@ article{
     justify-content: center;
     margin-bottom: 50px;
 }
+.title{
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-top : 25px;
+    padding:10px;
+    font-size: 32px;
+    color: #636363;
+    line-height: 46px;
+}
+
 .top-content{
     display: flex;
     justify-content: flex-start;
@@ -199,53 +208,13 @@ article{
 label{
     margin-top: 6px;
 }
-section {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-}
-.title{
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin-top : 25px;
-    padding:10px;
-    font-size: 32px;
-    color: #636363;
-    line-height: 46px;
-}
 
-h2{
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #636363;
-    font-size: 20px;
-    margin-left: 10px;
-    font-weight: bold;
-}
-.item-name{
-    display: flex;
-    justify-content: flex-start
-}
-.item-name2{
-    margin-left: 500px;
-    text-align: center;
-}
-
-.amount{
-    margin-left: 10px;
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: #fcfcfa;
-    padding: 0 30px;
-    border-radius: 5px;
-    border: solid 1px;
-    border-color: #c2c2c7;
-}
-
-.sheetlist-table {
-    margin: 10px 0 15px;
-    padding: 10px;
-}
-.button{
+.save-button{
     display: flex;
     justify-content: center;
 }
+
+
+
     
 </style>
