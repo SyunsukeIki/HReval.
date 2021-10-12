@@ -29,20 +29,33 @@
                 <div class="sheetlist-sec1">
                     <div class="sheetlist-table">
                         <b-table :items="items" :fields="fields">
-                            <template #cell(evaluator)="">
+                            <template #cell(checkbox)>
                                 <div>
-                                    <b-badge pill variant="success"><span class="badge-size2">①山田太郎</span></b-badge>
+                                    <b-form-checkbox class="checkbox-size" size="lg"></b-form-checkbox>
+                                </div>
+                            </template>     
+                            <template #cell(evaluator)="data">
+                                <div>
+                                    <b-badge pill variant="success"><span class="badge-size2">{{data.item.evaluator}}</span></b-badge>
                                 </div>
                             </template>
-                            <template #cell(isEdit)="">
+                            <template #cell(isEdit)>
                                 <div>
                                     <b-button variant="outline-info" v-b-modal.evaluator_edit><b-icon icon="journal-text" aria-hidden="true"></b-icon> 編集</b-button>
                                 </div>
-                            </template>       
+                            </template>    
+                            <template #cell(group)="data">
+                                <div>
+                                    <b-badge pill variant="success"><span class="badge-size2">{{data.item.group}}</span></b-badge>
+                                </div>
+                            </template>   
                         </b-table>
                     </div>
                 </div>
                 <evaluator-edit evaluator_edit_modal_id="evaluator_edit" />
+                <div class="end">
+                    <b-button variant="primary">実行</b-button>
+                </div>
             </div>
         </article>
 </template>
@@ -55,6 +68,7 @@
     data() {
             return{   
                 fields: [
+                { key: 'checkbox', label: '' },
                 { key: 'employee', label: 'ユーザー名' },
                 { key: 'evaluator', label: '評価者' },
                 { key: 'isEdit', label: '' },
@@ -62,11 +76,11 @@
                 { key: 'distributed', label: '配布' }
                 ],
                 items: [
-                { employee: '阿部太郎', evaluator: '<b-badge variant="info">一般社員</b-badge>', isEdit:'', group: 'プログラマ（社外事業）', distributed: '済' },
-                { employee: '阿部太郎', evaluator: 'システム事業部', isEdit:'',group: 'プログラマ（社外事業）', distributed: '未' },
-                { employee: '鵜飼太郎', evaluator: 'システム事業部', isEdit:'',group: '営業', distributed: '未' },
-                { employee: '江田山太郎', evaluator: 'システム事業部', isEdit:'',group: '営業', distributed: '済' },
-                { employee: '小野太郎', evaluator: '制作事業部', isEdit:'',group: 'デザイナー（社内事業）', distributed: '済' }
+                { employee: '阿部太郎', evaluator: '山田 太郎', isEdit:'', group: 'プログラマ（社外事業）', distributed: '済' },
+                { employee: '阿部太郎', evaluator: '山田太郎', isEdit:'',group: 'プログラマ（社外事業）', distributed: '未' },
+                { employee: '鵜飼太郎', evaluator: '山田太郎', isEdit:'',group: '営業', distributed: '未' },
+                { employee: '江田山太郎', evaluator: '山田太郎', isEdit:'',group: '営業', distributed: '済' },
+                { employee: '小野太郎', evaluator: '山田太郎', isEdit:'',group: 'デザイナー（社内事業）', distributed: '済' }
                 ], 
                 selected: null,
                 options: [
@@ -117,6 +131,7 @@
     margin-top: 20px;
 }
 .badge-size2{
+    font-size: 18px;
     display: flex;
     justify-content: center;
 }

@@ -10,20 +10,20 @@
             <div class="list">
                     <b-col cols="5">
                         <div id="scrollspy-nested" style="position:relative; height:350px; overflow-y:auto">
-                        <b-form-checkbox><h4 class="item">阿部太郎</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item">阿部太郎</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item">山田花子</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item" >伊藤純一</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item" >松尾奈々</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item" >中村信二</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item" >田中勇気</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item" >阿部太郎</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item" >阿部太郎</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item" >山田花子</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item" >浜本千賀子</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item" >重松千穂美</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item" >福岡次郎</h4></b-form-checkbox>
-                        <b-form-checkbox><h4 class="item" >福岡次郎</h4></b-form-checkbox>
+                        <h4 class="item">阿部太郎</h4>
+                        <h4 class="item">阿部太郎</h4>
+                        <h4 class="item">山田花子</h4>
+                        <h4 class="item" >伊藤純一</h4>
+                        <h4 class="item" >松尾奈々</h4>
+                        <h4 class="item" >中村信二</h4>
+                        <h4 class="item" >田中勇気</h4>
+                        <h4 class="item" >阿部太郎</h4>
+                        <h4 class="item" >阿部太郎</h4>
+                        <h4 class="item" >山田花子</h4>
+                        <h4 class="item" >浜本千賀子</h4>
+                        <h4 class="item" >重松千穂美</h4>
+                        <h4 class="item" >福岡次郎</h4>
+                        <h4 class="item" >福岡次郎</h4>
                         </div>
                     </b-col>
                     <div class="direction">
