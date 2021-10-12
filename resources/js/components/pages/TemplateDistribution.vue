@@ -31,13 +31,17 @@
                         <b-table :items="items" :fields="fields">
                             <template #cell(evaluator)="">
                                 <div>
-                                    <b-badge pill variant="success"><span class="badge-size2">リーダー</span></b-badge>
+                                    <b-badge pill variant="success"><span class="badge-size2">①山田太郎</span></b-badge>
                                 </div>
-                            </template>     
+                            </template>
+                            <template #cell(isEdit)="">
+                                <div>
+                                    <b-button variant="outline-info" v-b-modal.evaluator_edit><b-icon icon="journal-text" aria-hidden="true"></b-icon> 編集</b-button>
+                                </div>
+                            </template>       
                         </b-table>
                     </div>
                 </div>
-                <b-button variant="outline-info" v-b-modal.evaluator_edit><b-icon icon="journal-text" aria-hidden="true"></b-icon> 編集</b-button>
                 <evaluator-edit evaluator_edit_modal_id="evaluator_edit" />
             </div>
         </article>
@@ -53,16 +57,16 @@
                 fields: [
                 { key: 'employee', label: 'ユーザー名' },
                 { key: 'evaluator', label: '評価者' },
-    
+                { key: 'isEdit', label: '' },
                 { key: 'group', label: '付属グループ' },
                 { key: 'distributed', label: '配布' }
                 ],
                 items: [
-                { employee: '阿部太郎', evaluator: '<b-badge variant="info">一般社員</b-badge>', group: 'プログラマ（社外事業）', distributed: '済' },
-                { employee: '阿部太郎', evaluator: 'システム事業部', group: 'プログラマ（社外事業）', distributed: '未' },
-                { employee: '鵜飼太郎', evaluator: 'システム事業部', group: '営業', distributed: '未' },
-                { employee: '江田山太郎', evaluator: 'システム事業部', group: '営業', distributed: '済' },
-                { employee: '小野太郎', evaluator: '制作事業部', group: 'デザイナー（社内事業）', distributed: '済' }
+                { employee: '阿部太郎', evaluator: '<b-badge variant="info">一般社員</b-badge>', isEdit:'', group: 'プログラマ（社外事業）', distributed: '済' },
+                { employee: '阿部太郎', evaluator: 'システム事業部', isEdit:'',group: 'プログラマ（社外事業）', distributed: '未' },
+                { employee: '鵜飼太郎', evaluator: 'システム事業部', isEdit:'',group: '営業', distributed: '未' },
+                { employee: '江田山太郎', evaluator: 'システム事業部', isEdit:'',group: '営業', distributed: '済' },
+                { employee: '小野太郎', evaluator: '制作事業部', isEdit:'',group: 'デザイナー（社内事業）', distributed: '済' }
                 ], 
                 selected: null,
                 options: [
