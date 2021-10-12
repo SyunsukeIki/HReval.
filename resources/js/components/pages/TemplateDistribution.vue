@@ -58,7 +58,7 @@
                 { key: 'employee', label: 'ユーザー名' },
                 { key: 'evaluator', label: '評価者' },
                 { key: 'isEdit', label: '' },
-                { key: 'group', label: '付属グループ' },
+                { key: 'group', label: '所属グループ' },
                 { key: 'distributed', label: '配布' }
                 ],
                 items: [
