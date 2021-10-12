@@ -34,9 +34,9 @@
                                     <b-form-checkbox class="checkbox-size" size="lg"></b-form-checkbox>
                                 </div>
                             </template>     
-                            <template #cell(evaluator)="data">
-                                <div>
-                                    <b-badge pill variant="success"><span class="badge-size2">{{data.item.evaluator}}</span></b-badge>
+                            <template #cell(evaluators)="data">
+                                <div class="item">
+                                    <b-badge :key="evaluator" v-for="evaluator in data.item.evaluators" pill variant="success"><span class="badge-size"> {{evaluator}}</span></b-badge>
                                 </div>
                             </template>
                             <template #cell(isEdit)>
@@ -46,7 +46,7 @@
                             </template>    
                             <template #cell(group)="data">
                                 <div>
-                                    <b-badge pill variant="success"><span class="badge-size2">{{data.item.group}}</span></b-badge>
+                                    <b-badge :key="group" v-for="group in data.item.groups" pill variant="success"><span class="badge-size"> {{group}}</span></b-badge>
                                 </div>
                             </template>   
                         </b-table>
@@ -70,18 +70,19 @@
                 fields: [
                 { key: 'checkbox', label: '' },
                 { key: 'employee', label: 'ユーザー名' },
-                { key: 'evaluator', label: '評価者' },
+                { key: 'evaluators', label: '評価者' },
                 { key: 'isEdit', label: '' },
                 { key: 'group', label: '所属グループ' },
                 { key: 'distributed', label: '配布' }
                 ],
                 items: [
-                { employee: '阿部太郎', evaluator: '山田 太郎', isEdit:'', group: 'プログラマ（社外事業）', distributed: '済' },
-                { employee: '阿部太郎', evaluator: '山田太郎', isEdit:'',group: 'プログラマ（社外事業）', distributed: '未' },
-                { employee: '鵜飼太郎', evaluator: '山田太郎', isEdit:'',group: '営業', distributed: '未' },
-                { employee: '江田山太郎', evaluator: '山田太郎', isEdit:'',group: '営業', distributed: '済' },
-                { employee: '小野太郎', evaluator: '山田太郎', isEdit:'',group: 'デザイナー（社内事業）', distributed: '済' }
+                { employee: '阿部太郎', evaluators:  ['中西太郎', '佐藤次郎', '鈴木大輔'], isEdit:'', groups: ['プログラマ（社外事業）','リーダー'], distributed: '済' },
+                { employee: '阿部太郎', evaluators: ['松田太郎', '佐藤次郎', '鈴木大輔'], isEdit:'',groups: ['プログラマ（社外事業）'], distributed: '未' },
+                { employee: '鵜飼太郎', evaluators:['瀬戸太郎', '佐藤次郎', '鈴木大輔'], isEdit:'',groups: ['営業'], distributed: '未' },
+                { employee: '江田山太郎', evaluators:['田中太郎', '佐藤次郎', '鈴木大輔'], isEdit:'',groups: ['営業','リーダー'], distributed: '済' },
+                { employee: '小野太郎', evaluators: ['岩崎太郎', '佐藤次郎', '鈴木大輔'], isEdit:'',groups: ['デザイナー（社内事業）'], distributed: '済' }
                 ], 
+                evaluators:["中西太郎", "佐藤次郎", "鈴木大輔"],
                 selected: null,
                 options: [
                     { value: null, text: 'テンプレートを選択' },
@@ -123,17 +124,16 @@
     justify-content: flex-start;
     margin-top: 20px;
 }
+.item{
+    display: flex;
+    align-items: flex-start;
+}
 .item1{
     margin-left: 5px;
     width:70%;
 }
 .section2{
     margin-top: 20px;
-}
-.badge-size2{
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
 }
 .end{
     display: flex;
