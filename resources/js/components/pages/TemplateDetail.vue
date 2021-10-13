@@ -17,7 +17,7 @@
             <div class="sec-content">
                 <div class="item">
                     <b-row>
-                        <b-col cols="10">
+                        <b-col cols="15">
                             <b-badge variant="info" >
                             <span class="badge-size">項目名</span></b-badge><span class="label-text">リーダーが数字を把握しているのかどうか</span>
                         </b-col>  
@@ -31,7 +31,7 @@
             <div class="sec-content">
                 <div class="item">
                     <b-row>
-                        <b-col cols="10">
+                        <b-col cols="15">
                             <b-badge variant="info" >
                             <span class="badge-size">項目名</span></b-badge><span class="label-text">チームに貢献する</span>
                         </b-col>  
@@ -57,7 +57,7 @@
             <div class="sec-content">
                 <div class="item">
                     <b-row>
-                        <b-col cols="10">
+                        <b-col cols="15">
                             <b-badge variant="info" >
                             <span class="badge-size">項目名</span></b-badge><span class="label-text">売上達成率</span>
                         </b-col>  

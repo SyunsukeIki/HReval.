@@ -5,42 +5,41 @@
                 <div class="badge-space"><b-badge variant="info"><span class="badge-size">ユーザー名</span></b-badge></div>
                 <h4>阿部太郎</h4>
             </div>
-            <b-badge variant="info"><span class="badge-size">ユーザーリスト</span></b-badge>
-            <template>
-            <div class="list">
-                    <b-col cols="5">
-                        <div id="scrollspy-nested" style="position:relative; height:350px; overflow-y:auto">
-                        <h4 class="item">阿部太郎</h4>
-                        <h4 class="item">阿部太郎</h4>
-                        <h4 class="item">山田花子</h4>
-                        <h4 class="item" >伊藤純一</h4>
-                        <h4 class="item" >松尾奈々</h4>
-                        <h4 class="item" >中村信二</h4>
-                        <h4 class="item" >田中勇気</h4>
-                        <h4 class="item" >阿部太郎</h4>
-                        <h4 class="item" >阿部太郎</h4>
-                        <h4 class="item" >山田花子</h4>
-                        <h4 class="item" >浜本千賀子</h4>
-                        <h4 class="item" >重松千穂美</h4>
-                        <h4 class="item" >福岡次郎</h4>
-                        <h4 class="item" >福岡次郎</h4>
+            <section>
+                <div class="list">
+                        <div>
+                            <b-badge variant="info"><span class="badge-size">ユーザーリスト</span></b-badge>
+                            <template>
+                            <div>
+                                <b-form-select v-model="selected" :options="options" :select-size="12" class="select-form" ></b-form-select>
+                            </div>
+                            </template>
                         </div>
-                    </b-col>
-                    <div class="direction">
-                        <div class="button1">
-                            <a href="#"><b-icon icon="arrow-right-square-fill" font-scale=2.5 variant="danger"></b-icon></a>
+                        <div class="direction">
+                            <div class="button1">
+                                <a href="#"><b-icon icon="arrow-right-square-fill" font-scale=2.5 variant="danger"></b-icon></a>
+                            </div>
+                            <div class="button2">
+                                <a href="#"><b-icon icon="arrow-left-square-fill" font-scale=2.5 variant="primary"></b-icon></a>
+                            </div>
                         </div>
-                        <div class="button2">
-                            <a href="#"><b-icon icon="arrow-left-square-fill" font-scale=2.5 variant="primary"></b-icon></a>
+                        <div>
+                            <div>
+                                <b-badge variant="info"><span class="badge-size">評価者リスト</span></b-badge>
+                            </div>
+                                <template>
+                                <div>
+                                    <b-form-select v-model="selected2" :options="options2" :select-size="12" class="select-form" ></b-form-select>
+                                </div>
+                                </template>
+                                    <b-icon icon="arrow-up-square-fill" font-scale=1.5 variant="warning" class="button3"></b-icon>
+                                    <b-icon icon="arrow-down-square-fill" font-scale=1.5 class="button4" variant="secondary"></b-icon>
+                                    <b-icon icon="arrow-up-square-fill" font-scale=1.5 variant="warning" class="button3"></b-icon>
+                                    <b-icon icon="arrow-down-square-fill" font-scale=1.5 variant="secondary" class="button4"></b-icon>
                         </div>
-                    </div>
-                        <b-col cols="5" class="card">
-                                <h4 class="item">①伊藤純一</h4>
-                                <h4 class="item">②山田花子</h4>
-                        </b-col>
-            </div>
-            </template>
-            <!-- 登録ボタンの右寄せ -->
+                </div>
+            </section>
+            <!-- 保存ボタンの右寄せ -->
             <b-container class="bv-example-row">
                 <b-row align-h="end">
                     <b-col cols="2"><b-button class="mt-1" block @click="$bvModal.hide('bv-modal-example')" variant="primary">保存</b-button></b-col>
@@ -62,20 +61,46 @@
             return {
                 fields: [{ key: 'name', label: '投稿者' },{ key: 'memo', label: 'メモ' },{ key: 'date', label: '投稿日' }],
                 items: [
-                { name: '山田太郎', memo: 'ここにメモを表示', date: '20xx年xx月xx日' },
-                { name: '山田太郎', memo: 'ここにメモを表示', date: '20xx年xx月xx日' }
+                    { name: '山田太郎', memo: 'ここにメモを表示', date: '20xx年xx月xx日' },
+                    { name: '山田太郎', memo: 'ここにメモを表示', date: '20xx年xx月xx日' }
                 ],
+
                 text:"",
+
+                selected: null,
+                options: [
+                    { value: 'a', text: '中村太郎' },
+                    { value: 'b', text: '斎藤次郎' },
+                    { value: 'c', text: '小室太郎' },
+                    { value: 'd', text: '佐藤次郎',},
+                    { value: 'e', text: '松尾奈々' },
+                    { value: 'f', text: '菅圭' },
+                    { value: 'g', text: '末田利信' },
+                    { value: 'h', text: '山田孝之' },
+                    { value: 'i', text: '大島勇気' },
+                    { value: 'j', text: '田中五郎' },
+                    { value: 'k', text: '三ツ島大吾' },
+                    { value: 'l', text: '江頭宗助' },
+                ],
+                selected2: null,
+                options2: [
+                    { value: 'a', text: '中村太郎' },
+                    { value: 'b', text: '斎藤次郎' },
+                    { value: 'c', text: '小室太郎' },
+                ],
             }
         }
     };
 </script>
 
-
 <style>
 .start{
     display: flex;
 }
+.start2{
+    display: flex;
+    margin-bottom: 10px;
+    }
 .badge-space{
     margin-right: 10px;
 }
@@ -84,12 +109,22 @@
     display: flex;
     justify-content: space-between;
 }
+.select-form{
+    margin-top: 10px;
+    width: 300px;
+}
+.click :focus{
+    background: bisque;
+}
 .item{
     font-size: 20px;
 }
+
 .card{
     display: flex;
-    padding-top: 5px;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 10px 50px 200px 10px;
 }
 .direction{
     display: flex;
@@ -101,6 +136,12 @@
 }
 .button2 :hover{
     color: rgb(18, 18, 145);
+}
+.button3 :hover{
+    color: rgb(187, 182, 108);
+}
+.button4 :hover{
+    color: rgb(71, 71, 71);
 }
     
 

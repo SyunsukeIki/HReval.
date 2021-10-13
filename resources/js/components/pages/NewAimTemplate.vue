@@ -25,52 +25,52 @@
                                 <b-form-input v-model="text" ></b-form-input>
                             </div>                           
                 </div>                     
-
-                <b-card class="mt-2">
-                    <b-container class="bv-example-row">
+                <div class="third-content">
+                        <div class="item2">
                             <div class="item1">
                                 <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
                                 <div class="input2">
                                     <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
                                 </div>
                             </div>
+                            <div class="item1">
                                 <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
-                            <div class="form">
                                 <b-form-textarea
                                 id="textarea"
                                 v-model="text"
                                 placeholder="詳細を入力してください"
-                                rows="3"
-                                max-rows="6"
+                                rows="5"
+                                max-rows="10"
+                                class="input1"
                                 ></b-form-textarea>
                                 <pre class="mt-3 mb-0">{{ text }}</pre>
                             </div>
-                            <div class="deletebutton"><b-button>項目削除</b-button></div>                      
-                    </b-container>
-                </b-card>
-                <b-card class="mt-2">
-                    <b-container class="bv-example-row">
+                        </div>
+                        <div class="deletebutton"><b-button>項目削除</b-button></div>        
+                </div>              
+                <div class="third-content">
+                        <div class="item2">
                             <div class="item1">
                                 <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
                                 <div class="input2">
                                     <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
                                 </div>
                             </div>
-                            <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
-                            <div class="form">
+                            <div class="item1">
+                                <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
                                 <b-form-textarea
                                 id="textarea"
                                 v-model="text"
                                 placeholder="詳細を入力してください"
-                                rows="3"
-                                max-rows="6"
+                                rows="5"
+                                max-rows="10"
+                                class="input1"
                                 ></b-form-textarea>
-
                                 <pre class="mt-3 mb-0">{{ text }}</pre>
                             </div>
-                            <div class="deletebutton" ><b-button>項目削除</b-button></div>                      
-                    </b-container>
-                </b-card>
+                        </div>
+                        <div class="deletebutton"><b-button>項目削除</b-button></div>        
+                </div>
                 <div class="newbutton"><b-button variant="primary">項目追加</b-button></div>
             </div>
             <div class="sec-content">
@@ -91,32 +91,35 @@
                                 <b-form-input v-model="text" ></b-form-input>
                             </div>                           
                 </div>
-                <b-card class="mt-2">
-                    <b-container class="bv-example-row">
+                <div class="third-content">
+                        <div class="item2">
                             <div class="item1">
-                                <b-badge variant="info" ><span>項目名</span></b-badge>
+                                <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
                                 <div class="input2">
                                     <b-form-input v-model="text" placeholder="項目名を入力してください" class="input2"></b-form-input>
                                 </div>
                             </div>
-                            <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
-                            <div class="form">
+                            <div class="item1">
+                                <b-badge variant="info"><span class="badge-size" >詳細</span></b-badge>
                                 <b-form-textarea
                                 id="textarea"
                                 v-model="text"
                                 placeholder="詳細を入力してください"
-                                rows="3"
-                                max-rows="6"
+                                rows="5"
+                                max-rows="10"
+                                class="input1"
                                 ></b-form-textarea>
-
                                 <pre class="mt-3 mb-0">{{ text }}</pre>
                             </div>
-                            <div class="deletebutton"><b-button>項目削除</b-button></div>                      
-                    </b-container>
-                </b-card>
+                        </div>
+                        <div class="deletebutton"><b-button>項目削除</b-button></div>        
+                </div>
                 <div class="newbutton"><b-button variant="primary">項目追加</b-button></div>
             </div>
-            <div class="save-button"><b-button variant="primary">保存</b-button></div>
+            <div class="buttons">
+                <div class="save-button"><b-button variant="primary">保存</b-button></div>
+                <b-button variant="success" ><div class="backbutton"><a href="/aimtemplatelist">戻る</a></div></b-button>
+            </div>
         </article>
 </template>
 
@@ -158,6 +161,11 @@ article{
     border-top : 5px solid #7db4e6;
     background-color: #fff;
 }
+.third-content{
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid #dbdbdc;
+}
 
 .top{
    display: flex;
@@ -166,15 +174,15 @@ article{
 }
 .input1{
     margin-left: 10px;
-    width:80%;
+    width:100%;
 }
 .input2{
     margin :0 10px 2px 3px;
-    width:350px;
+    width:100%;
 }
 .input3{
-    margin-left: 2px;
-    width: 100px;
+    margin-left: 5px;
+    width: 30%;
 }
 
 .badge{
@@ -184,20 +192,20 @@ article{
 
 .item1{
     display: flex;
+    margin-top: 5px;
 }
 
 .item2{
     display: flex;
     flex-direction: column;
 }
-.form{
-    margin-top: 5px;
-}
+
 .badge-space{
     margin-bottom: 3px;
 }
 .deletebutton{
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 .newbutton{
     margin-top: 10px;
@@ -216,10 +224,15 @@ label{
     margin-top: 6px;
 }
 
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin-right:10px;
+}
 .save-button{
     display: flex;
     justify-content: flex-end;
-    margin-right: 30px;
+    margin-right: 10px;
 }
 
 

@@ -15,18 +15,15 @@
                     </div>
                 </div>
                 <div  class="section2">
-                    <b-badge variant="info" ><span class="badge-size">配布先</span></b-badge>
+                    <b-badge variant="primary" ><span class="badge-size">絞り込み</span></b-badge>
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="ユーザー名、グループ名を入力して絞り込み">
-                        <div class="item2">
-                            <b-form-select v-model="selected3" :options="options3"></b-form-select>
-                        </div>
                     </div>                                        
                 </div>
                 <div class="end">
                     <a href="#" class="link-primary">絞り込み結果を全選択</a>
                 </div>
-                <div class="sheetlist-sec1">
+                <div class="list-sec">
                     <div class="sheetlist-table">
                         <b-table :items="items" :fields="fields">
                             <template #cell(checkbox)>
@@ -55,6 +52,7 @@
                 <evaluator-edit evaluator_edit_modal_id="evaluator_edit" />
                 <div class="end">
                     <b-button variant="primary">実行</b-button>
+                    <b-button variant="success" ><a href="/aimtemplatelist">戻る</a></b-button>
                 </div>
             </div>
         </article>
@@ -68,31 +66,30 @@
     data() {
             return{   
                 fields: [
-                { key: 'checkbox', label: '' },
-                { key: 'employee', label: 'ユーザー名' },
-                { key: 'evaluators', label: '評価者' },
-                { key: 'isEdit', label: '' },
-                { key: 'group', label: '所属グループ' },
-                { key: 'distributed', label: '配布' }
+                    { key: 'checkbox', label: '' },
+                    { key: 'employee', label: 'ユーザー名' },
+                    { key: 'evaluators', label: '評価者' },
+                    { key: 'isEdit', label: '' },
+                    { key: 'group', label: '所属グループ' },
                 ],
                 items: [
-                { employee: '阿部太郎', evaluators:  ['中西太郎', '佐藤次郎', '鈴木大輔'], isEdit:'', groups: ['プログラマ（社外事業）','リーダー'], distributed: '済' },
-                { employee: '阿部太郎', evaluators: ['松田太郎', '佐藤次郎', '鈴木大輔'], isEdit:'',groups: ['プログラマ（社外事業）'], distributed: '未' },
-                { employee: '鵜飼太郎', evaluators:['瀬戸太郎', '佐藤次郎', '鈴木大輔'], isEdit:'',groups: ['営業'], distributed: '未' },
-                { employee: '江田山太郎', evaluators:['田中太郎', '佐藤次郎', '鈴木大輔'], isEdit:'',groups: ['営業','リーダー'], distributed: '済' },
-                { employee: '小野太郎', evaluators: ['岩崎太郎', '佐藤次郎', '鈴木大輔'], isEdit:'',groups: ['デザイナー（社内事業）'], distributed: '済' }
+                    { employee: '阿部太郎',   evaluators:['①中西太郎', '②佐藤次郎', ], isEdit:'',  groups: ['プログラマ（社外事業）','リーダー']},
+                    { employee: '阿部太郎',   evaluators:['①松田太郎', '②川村勇気', '③鈴木大輔'], isEdit:'',  groups: ['プログラマ（社外事業）']},
+                    { employee: '鵜飼太郎',   evaluators:['①瀬戸太郎'], isEdit:'',  groups: ['営業']},
+                    { employee: '江田山太郎', evaluators:['①田中太郎', '②佐藤次郎', '③木村花子'], isEdit:'',  groups: ['営業','リーダー']},
+                    { employee: '小野太郎',   evaluators:['①岩崎太郎', '②浜村鉄平'], isEdit:'',  groups: ['デザイナー（社内事業）']}
                 ], 
                 evaluators:["中西太郎", "佐藤次郎", "鈴木大輔"],
                 selected: null,
                 options: [
                     { value: null, text: 'テンプレートを選択' },
-                    { value: '1', text: '一般社員_2020' },
-                    { value: '2', text: '一般社員_2021' },
-                    { value: '3', text: '営業社員_2020' },
-                    { value: '4', text: '営業社員_2021' },
-                    { value: '5', text: 'リーダー用_2020' },
-                    { value: '6', text: 'リーダー用_2021' }
-                    ],
+                    { value: '1',  text: '一般社員_2020' },
+                    { value: '2',  text: '一般社員_2021' },
+                    { value: '3',  text: '営業社員_2020' },
+                    { value: '4',  text: '営業社員_2021' },
+                    { value: '5',  text: 'リーダー用_2020' },
+                    { value: '6',  text: 'リーダー用_2021' }
+                ],
 
                 selected2: null,
                 options2: [
@@ -104,14 +101,7 @@
                     { value: '4', text: '2021/06/02~2022/01/01' },
                     { value: '5', text: '2022/01/02~2022/06/01' },
                     { value: '6', text: '2022/06/02~2023/01/01' }
-                    ],
-
-                selected3: null,
-                options3: [
-                    { value: null, text: '配布' },
-                    { value: '1', text: '済' },
-                    { value: '2', text: '未' },
-                    ]
+                ],
         }  
         
     },
@@ -133,11 +123,14 @@
     width:70%;
 }
 .section2{
-    margin-top: 20px;
+    margin-top: 100px;
 }
 .end{
     display: flex;
     justify-content: flex-end;
+}
+.end a{
+    color: #fff;
 }
 
 
