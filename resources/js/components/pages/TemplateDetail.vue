@@ -27,8 +27,8 @@
                                 </b-col>  
                             </b-row>
                         </div> 
-                        <div>
-                            <b-badge variant="info" ><span class="badge-size">項目詳細</span></b-badge>
+                        <b-badge variant="info" ><span class="badge-size">項目詳細</span></b-badge>
+                        <div class="item2">
                             <p class="card-text">{{aimcontent.titleDetail}}</p>
                         </div>   
                     </div>
@@ -87,6 +87,11 @@
 }
 .item{
     margin-bottom: 5px;
+}
+.item2{
+    border: 1px solid #dbdbdc;
+    border-radius: 5px;
+    padding: 5px;
 }
 .badge-size2{
     margin-top: 2px;
