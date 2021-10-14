@@ -126,6 +126,9 @@ h2{
     display: flex;
     align-items: flex-start;
 }
+.item a{
+    font-size: 14px;
+}
 .item1{
     margin-left: 5px;
     width:70%;
