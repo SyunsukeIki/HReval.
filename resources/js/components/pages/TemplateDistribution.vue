@@ -1,6 +1,7 @@
 <template>
         <article>
             <h1 class="title">目標シートテンプレート<br>配布</h1>
+            <div class="sec-content">
                 <div class="section1">         
                     <b-badge variant="info" ><span class="badge-size">テンプレート名</span></b-badge>
                     <div class="item1">
@@ -13,48 +14,54 @@
                         <b-form-select v-model="selected2" :options="options2"></b-form-select>
                     </div>
                 </div>
-            <h2>配布対象ユーザー</h2>
-            <div class="sec-content">
-                <div  class="section2">
-                    <b-badge variant="primary" ><span class="badge-size">絞り込み</span></b-badge>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="ユーザー名、グループ名を入力して絞り込み">
-                    </div>                                        
-                </div>
-                <div class="item">
-                    <a href="#" class="link-primary">絞り込み結果を全選択</a>
-                </div>
-                <div class="list-sec">
-                    <div class="sheetlist-table">
-                        <b-table :items="items" :fields="fields">
-                            <template #cell(checkbox)>
-                                <div>
-                                    <b-form-checkbox class="checkbox-size" size="lg"></b-form-checkbox>
-                                </div>
-                            </template>     
-                            <template #cell(evaluators)="data">
-                                <div class="item">
-                                    <b-badge :key="evaluator" v-for="evaluator in data.item.evaluators" pill variant="success"><span class="badge-size"> {{evaluator}}</span></b-badge>
-                                </div>
-                            </template>
-                            <template #cell(isEdit)>
-                                <div>
-                                    <b-button variant="outline-info" v-b-modal.evaluator_edit><b-icon icon="journal-text" aria-hidden="true"></b-icon> 編集</b-button>
-                                </div>
-                            </template>    
-                            <template #cell(group)="data">
-                                <div>
-                                    <b-badge :key="group" v-for="group in data.item.groups" pill variant="success"><span class="badge-size"> {{group}}</span></b-badge>
-                                </div>
-                            </template>   
-                        </b-table>
+                <h2>配布対象ユーザー</h2>
+                <div class="sec-content">
+                    <div  class="section1">
+                        <b-badge variant="info" ><span class="badge-size">絞り込み</span></b-badge>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="ユーザー名、グループ名を入力して絞り込み">
+                        </div>                                        
                     </div>
-                </div>
-                <evaluator-edit evaluator_edit_modal_id="evaluator_edit" />
-                <distribution-check distribution_check_modal_id="distribution_check" />
-                <div class="end">
-                    <b-button variant="success" ><a href="/aimtemplatelist">戻る</a></b-button>
-                    <b-button variant="primary" v-b-modal.distribution_check>実行</b-button>
+                    <div class="item">
+                        <a href="#" class="link-primary">絞り込み結果を全選択</a>
+                    </div>
+                    <div class="list-sec">
+                        <div class="sheetlist-table">
+                            <b-table :items="items" :fields="fields">
+                                <template #cell(checkbox)>
+                                    <div>
+                                        <b-form-checkbox class="checkbox-size" size="lg"></b-form-checkbox>
+                                    </div>
+                                </template>     
+                                <template #cell(evaluators)="data">
+                                    <div class="item">
+                                        <b-badge :key="evaluator" v-for="evaluator in data.item.evaluators" pill variant="success"><span class="badge-size"> {{evaluator}}</span></b-badge>
+                                    </div>
+                                </template>
+                                <template #cell(isEdit)>
+                                    <div>
+                                        <b-button variant="outline-info" v-b-modal.evaluator_edit>編集</b-button>
+                                    </div>
+                                </template>    
+                                <template #cell(group)="data">
+                                    <div>
+                                        <b-badge :key="group" v-for="group in data.item.groups" pill variant="success"><span class="badge-size"> {{group}}</span></b-badge>
+                                    </div>
+                                </template> 
+                                <template #cell(isEdit2)>
+                                    <div>
+                                        <b-button variant="outline-info" v-b-modal.evaluator_edit>編集</b-button>
+                                    </div>
+                                </template>     
+                            </b-table>
+                        </div>
+                    </div>
+                    <evaluator-edit evaluator_edit_modal_id="evaluator_edit" />
+                    <distribution-check distribution_check_modal_id="distribution_check" />
+                    <div class="end">
+                        <b-button variant="success" ><a href="/aimtemplatelist">戻る</a></b-button>
+                        <b-button variant="primary" v-b-modal.distribution_check>実行</b-button>
+                    </div>
                 </div>
             </div>
         </article>
@@ -75,6 +82,7 @@
                     { key: 'evaluators', label: '評価者' },
                     { key: 'isEdit', label: '' },
                     { key: 'group', label: '所属グループ' },
+                    { key: 'isEdit2' , label: ''}
                 ],
                 items: [
                     { employee: '阿部太郎',   evaluators:['①中西太郎', '②佐藤次郎', ], isEdit:'',  groups: ['プログラマ（社外事業）','リーダー']},
@@ -131,7 +139,7 @@ h2{
 }
 .item1{
     margin-left: 5px;
-    width:70%;
+    width:90%;
 }
 
 .end{

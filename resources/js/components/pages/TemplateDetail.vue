@@ -27,10 +27,10 @@
                                 </b-col>  
                             </b-row>
                         </div> 
-                        <b-card>
+                        <div>
                             <b-badge variant="info" ><span class="badge-size">項目詳細</span></b-badge>
                             <p class="card-text">{{aimcontent.titleDetail}}</p>
-                        </b-card>   
+                        </div>   
                     </div>
                 </div> 
            </section>

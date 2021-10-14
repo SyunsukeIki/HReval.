@@ -162,7 +162,7 @@ article{
     background-color: #fff;
 }
 .third-content{
-    padding: 20px;
+    padding:20px;
     margin: 15px;
     border: 1px solid #dbdbdc;
 }
@@ -192,7 +192,7 @@ article{
 
 .item1{
     display: flex;
-    margin-top: 5px;
+    margin-bottom: ;
 }
 
 .item2{
