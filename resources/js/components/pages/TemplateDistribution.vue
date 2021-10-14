@@ -53,8 +53,8 @@
                 <evaluator-edit evaluator_edit_modal_id="evaluator_edit" />
                 <distribution-check distribution_check_modal_id="distribution_check" />
                 <div class="end">
-                    <b-button variant="primary" v-b-modal.distribution_check>実行</b-button>
                     <b-button variant="success" ><a href="/aimtemplatelist">戻る</a></b-button>
+                    <b-button variant="primary" v-b-modal.distribution_check>実行</b-button>
                 </div>
             </div>
         </article>
