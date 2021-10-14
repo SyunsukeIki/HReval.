@@ -1,7 +1,6 @@
 <template>
         <article>
             <h1 class="title">目標シートテンプレート<br>配布</h1>
-            <div class="sec-content">
                 <div class="section1">         
                     <b-badge variant="info" ><span class="badge-size">テンプレート名</span></b-badge>
                     <div class="item1">
@@ -9,18 +8,20 @@
                     </div>
                 </div>
                 <div class="section1">
-                    <b-badge variant="info" ><span>配布対象期間</span></b-badge>
+                    <b-badge variant="info" ><span class="badge-size">配布対象期間</span></b-badge>
                     <div class="item1">
                         <b-form-select v-model="selected2" :options="options2"></b-form-select>
                     </div>
                 </div>
+            <h2>配布対象ユーザー</h2>
+            <div class="sec-content">
                 <div  class="section2">
                     <b-badge variant="primary" ><span class="badge-size">絞り込み</span></b-badge>
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="ユーザー名、グループ名を入力して絞り込み">
                     </div>                                        
                 </div>
-                <div class="end">
+                <div class="item">
                     <a href="#" class="link-primary">絞り込み結果を全選択</a>
                 </div>
                 <div class="list-sec">
@@ -50,19 +51,22 @@
                     </div>
                 </div>
                 <evaluator-edit evaluator_edit_modal_id="evaluator_edit" />
+                <distribution-check distribution_check_modal_id="distribution_check" />
                 <div class="end">
-                    <b-button variant="primary">実行</b-button>
+                    <b-button variant="primary" v-b-modal.distribution_check>実行</b-button>
                     <b-button variant="success" ><a href="/aimtemplatelist">戻る</a></b-button>
                 </div>
             </div>
         </article>
 </template>
 <script>
-  import EvaluatorEdit  from '../atoms/EvaluatorEdit.vue';
+  import EvaluatorEdit  from '../atoms/EvaluatorEdit.vue';  
+  import DistributionCheck  from '../atoms/DistributionCheck.vue';
+  
   export default {
 
     name: 'template-distribution',
-    components: {EvaluatorEdit},
+    components: {EvaluatorEdit, DistributionCheck},
     data() {
             return{   
                 fields: [
@@ -114,6 +118,10 @@
     justify-content: flex-start;
     margin-top: 20px;
 }
+h2{
+    margin: 30px 0 0 12px;
+    font-size: 24px;
+}
 .item{
     display: flex;
     align-items: flex-start;
@@ -122,9 +130,7 @@
     margin-left: 5px;
     width:70%;
 }
-.section2{
-    margin-top: 100px;
-}
+
 .end{
     display: flex;
     justify-content: flex-end;

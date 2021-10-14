@@ -24,18 +24,16 @@
                             </div>
                         </div>
                         <div>
-                            <div>
+                            <div class="start">
                                 <b-badge variant="info"><span class="badge-size">評価者リスト</span></b-badge>
+                                <b-icon icon="arrow-up-square-fill" font-scale=2 class="button3"></b-icon>
+                                <b-icon icon="arrow-down-square-fill" font-scale=2 class="button3"></b-icon>
                             </div>
                                 <template>
                                 <div>
                                     <b-form-select v-model="selected2" :options="options2" :select-size="12" class="select-form" ></b-form-select>
                                 </div>
                                 </template>
-                                    <b-icon icon="arrow-up-square-fill" font-scale=1.5 variant="warning" class="button3"></b-icon>
-                                    <b-icon icon="arrow-down-square-fill" font-scale=1.5 class="button4" variant="secondary"></b-icon>
-                                    <b-icon icon="arrow-up-square-fill" font-scale=1.5 variant="warning" class="button3"></b-icon>
-                                    <b-icon icon="arrow-down-square-fill" font-scale=1.5 variant="secondary" class="button4"></b-icon>
                         </div>
                 </div>
             </section>
@@ -84,9 +82,9 @@
                 ],
                 selected2: null,
                 options2: [
-                    { value: 'a', text: '中村太郎' },
-                    { value: 'b', text: '斎藤次郎' },
-                    { value: 'c', text: '小室太郎' },
+                    { value: 'a', text: '①中村太郎' },
+                    { value: 'b', text: '②斎藤次郎' },
+                    { value: 'c', text: '③小室太郎' },
                 ],
             }
         }
@@ -137,11 +135,12 @@
 .button2 :hover{
     color: rgb(18, 18, 145);
 }
+.button3{
+    margin-left: 10px;
+    color: rgb(236, 236, 149);
+}
 .button3 :hover{
     color: rgb(187, 182, 108);
-}
-.button4 :hover{
-    color: rgb(71, 71, 71);
 }
     
 
