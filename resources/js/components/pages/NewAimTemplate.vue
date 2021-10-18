@@ -191,7 +191,6 @@ article{
 
 .item1{
     display: flex;
-    margin-bottom: ;
 }
 
 .item2{
