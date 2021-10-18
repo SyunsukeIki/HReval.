@@ -45,8 +45,8 @@
                                 ></b-form-textarea>
                                 <pre class="mt-3 mb-0">{{ text }}</pre>
                             </div>
-                        </div>
-                        <div class="deletebutton"><b-button>項目削除</b-button></div>        
+                            <div class="deletebutton"><b-button>項目削除</b-button></div> 
+                        </div>       
                 </div>              
                 <div class="third-content">
                         <div class="item2">
@@ -68,8 +68,8 @@
                                 ></b-form-textarea>
                                 <pre class="mt-3 mb-0">{{ text }}</pre>
                             </div>
-                        </div>
-                        <div class="deletebutton"><b-button>項目削除</b-button></div>        
+                        <div class="deletebutton"><b-button>項目削除</b-button></div> 
+                        </div>       
                 </div>
                 <div class="newbutton"><b-button variant="primary">項目追加</b-button></div>
             </div>
@@ -88,7 +88,7 @@
                             </div>
                             <b-badge variant="info"><span class="badge-size" >ウェイト</span></b-badge>
                             <div class="input3">
-                                <b-form-input v-model="text" ></b-form-input>
+                                <b-form-input v-model="text" class="input3" ></b-form-input>
                             </div>                           
                 </div>
                 <div class="third-content">
@@ -111,8 +111,8 @@
                                 ></b-form-textarea>
                                 <pre class="mt-3 mb-0">{{ text }}</pre>
                             </div>
-                        </div>
-                        <div class="deletebutton"><b-button>項目削除</b-button></div>        
+                            <div class="deletebutton"><b-button>項目削除</b-button></div>  
+                        </div>      
                 </div>
                 <div class="newbutton"><b-button variant="primary">項目追加</b-button></div>
             </div>
@@ -164,7 +164,6 @@ article{
 .third-content{
     padding:20px;
     margin: 15px;
-    border: 1px solid #dbdbdc;
 }
 
 .top{
