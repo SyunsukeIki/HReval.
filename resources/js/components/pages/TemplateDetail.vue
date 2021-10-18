@@ -10,24 +10,22 @@
                 </div>
             </section>    
             <section :key="aim" v-for="aim in aims">
-                <b-col cols="10">                 
+                <b-col cols="13">
+                <hr>                 
                 <div v-if="editMode" class="top">
                     <b-badge variant="info"><span class="badge-size">目標種別</span></b-badge>
-                    <input type="radio" id="one" value="action" v-model="picked" name="aimkinds1" class="radiobutton">
-                    <label for="one">行動目標</label>
-                    <input type="radio" id="two" value="amount" v-model="picked" name="aimkinds1" class="radiobutton">
-                    <label for="two">数値目標</label>
+                    <input type="radio" :name="'radio' + aim.radioNo" value="a" v-model="aim.radioDataArray" class="radiobutton"/><label for="1">行動目標</label>
+                    <input type="radio" :name="'radio' + aim.radioNo" value="b" v-model="aim.radioDataArray" class="radiobutton"/><label for="2"> 数値目標</label>
                 </div>   
                 <div v-else class="top">
                     <b-badge variant="info"><span class="badge-size">目標種別</span></b-badge>                 
                     <span class="label-text">{{aim.aimgroup}}</span>
                 </div>
                 </b-col>
-                <hr>
                 <div class="start">
                     <div v-if="editMode" class="start">
                         <b-badge variant="info"><span class="badge-size">分類</span></b-badge>
-                        <div class="input2"><b-form-input :value="aim.aimkind"></b-form-input></div>
+                        <div class="item1"><b-form-input :value="aim.aimkind"></b-form-input></div>
                     </div>
                     <div v-else class="start">
                         <b-badge variant="info"><span class="badge-size">分類</span></b-badge>
@@ -35,7 +33,7 @@
                     </div>
                     <div v-if="editMode" class="start-left">
                         <b-badge variant="info"><span class="badge-size">ウエイト</span></b-badge>
-                        <div class="input3"><b-form-input></b-form-input></div>
+                        <div class="input3"><b-form-input :value="aim.weight"></b-form-input></div>
                     </div>
                     <div v-else class="start-left">
                         <b-badge variant="info"><span class="badge-size">ウエイト</span></b-badge>
@@ -46,27 +44,25 @@
                     <div class="sec-content">
                         <div class="item">
                             <b-row>
-                                <b-col cols="15">
+                                <b-col cols="13">
                                     <div class="start">
                                         <b-badge variant="info" ><span class="badge-size">項目名</span></b-badge>
                                         <b-form-input v-if="editMode" :value="aimcontent.aimTitle" class="input2"></b-form-input>
-                                        <span v-else class="label-text">{{aimcontent.aimTitle}}</span>
+                                        <span v-else class="label-text2">{{aimcontent.aimTitle}}</span>
                                     </div>
                                 </b-col>  
                             </b-row>
                         </div> 
                         <b-badge variant="info" ><span class="badge-size">項目詳細</span></b-badge>
-                        <div>
-                            <b-form-textarea
-                            v-if="editMode"
-                            id="textarea"
-                            :value="aimcontent.titleDetail"
-                            rows="5"
-                            max-rows="10"
-                            class="input1"
-                            ></b-form-textarea>
-                            <p v-else class="label-text">{{aimcontent.titleDetail}}</p>
-                        </div>  
+                        <b-form-textarea
+                        v-if="editMode"
+                        id="textarea"
+                        :value="aimcontent.titleDetail"
+                        rows="5"
+                        max-rows="10"
+                        class="input1"
+                        ></b-form-textarea>
+                        <p v-else class="label-text">{{aimcontent.titleDetail}}</p> 
                         <div v-if="editMode"  class="button1"><b-button variant="danger">項目削除</b-button></div>
                     </div>
                 </div> 
@@ -81,6 +77,8 @@
                 <b-button variant="primary" @click="modeChange">編集</b-button>
                 <b-button variant="danger">削除</b-button>
             </div>
+            <ul>
+            </ul>
 
         </div>
     </article>
@@ -92,8 +90,9 @@
        return{
         editMode:false,
         templateName: '2021下期一般社員リーダー',
-        aims:[
-                {   
+        aims:   [
+                {   radioNo:1,
+                    radioDataArray:"a",   
                     aimgroup:'行動目標',
                     aimkind:'リーダーに求める行動目標',
                     weight:50,
@@ -104,7 +103,8 @@
                         titleDetail:'チーム内で何か一つ貢献する'}
                     ],
                  },
-                {   
+                {   radioNo:2,
+                    radioDataArray:"b",
                     aimgroup:'数値目標',
                     aimkind:'リーダーに求める数値目標',
                     weight:50,
@@ -114,7 +114,7 @@
                     ],
                  },
             ],
-      }
+       }
     },
     methods: {
         modeChange: function(){
@@ -137,6 +137,9 @@
 .item{
     margin-bottom: 5px;
 }
+.item1{
+    width: 70%;
+}
 .item2{
     border: 1px solid #dbdbdc;
     border-radius: 5px;
@@ -155,6 +158,15 @@
   margin-right:30px;
   color : #5f6368;
 }
+.label-text2{
+  margin-left:10px;
+  margin-right:30px;
+  color : #5f6368;
+}
+.column1{
+    display: flex;
+    flex-direction: column;
+}
 .buttons{
     display: flex;
     justify-content: flex-end;
@@ -169,6 +181,7 @@
 .start{
     display: flex;
     justify-content: flex-start;
+    margin-top: 5px;
 }
 .start-left{
     display: flex;
@@ -177,13 +190,15 @@
 .top{
    display: flex;
    justify-content: flex-start;
-   margin-top: 10px;
 }
 .radiobutton{
     width: 25px;
     height:25px;
     margin: 6px 5px 10px 30px;
     
+}
+.input1{
+    margin-top: 4px;
 }
 .input2{
     margin :0 10px 2px 3px;
