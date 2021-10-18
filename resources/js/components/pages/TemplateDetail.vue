@@ -98,10 +98,10 @@
                     aimkind:'リーダーに求める行動目標',
                     weight:50,
                     aimcontents:[
-                        {aimTitle:'あいうえお', 
-                        titleDetail:'あいうえお'},
-                        {aimTitle:'かきくけこ',
-                        titleDetail:'かきくけこ'}
+                        {aimTitle:'在籍年数毎の目標', 
+                        titleDetail:'在籍年数毎に一つ目標を設定する'},
+                        {aimTitle:'チームに貢献する',
+                        titleDetail:'チーム内で何か一つ貢献する'}
                     ],
                  },
                 {   
@@ -109,8 +109,8 @@
                     aimkind:'リーダーに求める数値目標',
                     weight:50,
                     aimcontents:[
-                        {aimTitle:'かきくけこ',
-                         titleDetail:'さしすせそ'},
+                        {aimTitle:'売上達成率',
+                         titleDetail:'自分を含めたチーム全体の売上達成率を計算'},
                     ],
                  },
             ],
