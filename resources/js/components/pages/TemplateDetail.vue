@@ -14,8 +14,8 @@
                 <hr>                 
                 <div v-if="editMode" class="top">
                     <b-badge variant="info"><span class="badge-size">目標種別</span></b-badge>
-                    <input type="radio" :name="'radio' + aim.radioNo" value="a" v-model="aim.radioDataArray" class="radiobutton"/><label for="1">行動目標</label>
-                    <input type="radio" :name="'radio' + aim.radioNo" value="b" v-model="aim.radioDataArray" class="radiobutton"/><label for="2"> 数値目標</label>
+                    <input id="1" type="radio" :name="'radio' + aim.radioNo" value="a" v-model="aim.radioDataArray" class="radiobutton"/><label for="1">行動目標</label>
+                    <input id="2" type="radio" :name="'radio' + aim.radioNo" value="b" v-model="aim.radioDataArray" class="radiobutton"/><label for="2"> 数値目標</label>
                 </div>   
                 <div v-else class="top">
                     <b-badge variant="info"><span class="badge-size">目標種別</span></b-badge>                 
@@ -25,7 +25,7 @@
                 <div class="start">
                     <div v-if="editMode" class="start">
                         <b-badge variant="info"><span class="badge-size">分類</span></b-badge>
-                        <div class="item1"><b-form-input :value="aim.aimkind"></b-form-input></div>
+                        <div class="input2"><b-form-input :value="aim.aimkind"></b-form-input></div>
                     </div>
                     <div v-else class="start">
                         <b-badge variant="info"><span class="badge-size">分類</span></b-badge>
