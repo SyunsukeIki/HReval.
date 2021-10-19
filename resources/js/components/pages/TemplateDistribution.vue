@@ -50,13 +50,14 @@
                                 </template> 
                                 <template #cell(isEdit2)>
                                     <div>
-                                        <b-button variant="outline-info" v-b-modal.evaluator_edit>編集</b-button>
+                                        <b-button variant="outline-info" v-b-modal.group_edit>編集</b-button>
                                     </div>
                                 </template>     
                             </b-table>
                         </div>
                     </div>
                     <evaluator-edit evaluator_edit_modal_id="evaluator_edit" />
+                    <group-edit group_edit_modal_id="group_edit" />
                     <distribution-check distribution_check_modal_id="distribution_check" />
                     <div class="end">
                         <b-button variant="success" ><a href="/aimtemplatelist">戻る</a></b-button>
@@ -68,12 +69,13 @@
 </template>
 <script>
   import EvaluatorEdit  from '../atoms/EvaluatorEdit.vue';  
+  import GroupEdit  from '../atoms/GroupEdit.vue'; 
   import DistributionCheck  from '../atoms/DistributionCheck.vue';
   
   export default {
 
     name: 'template-distribution',
-    components: {EvaluatorEdit, DistributionCheck},
+    components: {EvaluatorEdit,GroupEdit, DistributionCheck},
     data() {
             return{   
                 fields: [
@@ -85,7 +87,7 @@
                     { key: 'isEdit2' , label: ''}
                 ],
                 items: [
-                    { employee: '阿部太郎',   evaluators:['①中西太郎', '②佐藤次郎', ], isEdit:'',  groups: ['プログラマ（社外事業）','リーダー']},
+                    { employee: '井上太郎',   evaluators:['①中西太郎', '②佐藤次郎', ], isEdit:'',  groups: ['プログラマ（社外事業）','リーダー']},
                     { employee: '阿部太郎',   evaluators:['①松田太郎', '②川村勇気', '③鈴木大輔'], isEdit:'',  groups: ['プログラマ（社外事業）']},
                     { employee: '鵜飼太郎',   evaluators:['①瀬戸太郎'], isEdit:'',  groups: ['営業']},
                     { employee: '江田山太郎', evaluators:['①田中太郎', '②佐藤次郎', '③木村花子'], isEdit:'',  groups: ['営業','リーダー']},

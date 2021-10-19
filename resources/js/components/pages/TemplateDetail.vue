@@ -23,26 +23,26 @@
                 </div>
                 </b-col>
                 <div class="start">
-                    <div v-if="editMode" class="start">
+                    <div v-if="editMode" class="content1">
                         <b-badge variant="info"><span class="badge-size">分類</span></b-badge>
                         <div class="input2"><b-form-input :value="aim.aimkind"></b-form-input></div>
                     </div>
-                    <div v-else class="start">
+                    <div v-else class="content1">
                         <b-badge variant="info"><span class="badge-size">分類</span></b-badge>
                         <span class="label-text">{{aim.aimkind}}</span>
                     </div>
-                    <div v-if="editMode" class="start-left">
+                    <div v-if="editMode" class="content2">
                         <b-badge variant="info"><span class="badge-size">ウエイト</span></b-badge>
                         <div class="input3"><b-form-input :value="aim.weight"></b-form-input></div>
                     </div>
-                    <div v-else class="start-left">
+                    <div v-else class="content2">
                         <b-badge variant="info"><span class="badge-size">ウエイト</span></b-badge>
                         <span class="label-text">{{aim.weight}}</span>
                     </div>
                 </div>
                 <div :key="aimcontent" v-for="aimcontent in aim.aimcontents">
                     <div class="sec-content">
-                        <div class="item">
+                        <div style="margin-bottom: 5px;">
                             <b-row>
                                 <b-col cols="13">
                                     <div class="start">
@@ -53,15 +53,17 @@
                                 </b-col>  
                             </b-row>
                         </div> 
-                        <b-badge variant="info" ><span class="badge-size">項目詳細</span></b-badge>
-                        <b-form-textarea
-                        v-if="editMode"
-                        id="textarea"
-                        :value="aimcontent.titleDetail"
-                        rows="5"
-                        max-rows="10"
-                        class="input1"
-                        ></b-form-textarea>
+                        <div>
+                            <b-badge variant="info" ><span class="badge-size">項目詳細</span></b-badge>
+                        </div>
+                        <div v-if="editMode" style="margin-top: 3px;">
+                            <b-form-textarea                           
+                            id="textarea"
+                            :value="aimcontent.titleDetail"
+                            rows="5"
+                            max-rows="10"
+                            ></b-form-textarea>
+                        </div>
                         <p v-else class="label-text">{{aimcontent.titleDetail}}</p> 
                         <div v-if="editMode"  class="button1"><b-button variant="danger">項目削除</b-button></div>
                     </div>
@@ -134,12 +136,6 @@
     color: #636363;
     line-height: 46px;
 }
-.item{
-    margin-bottom: 5px;
-}
-.item1{
-    width: 70%;
-}
 .item2{
     border: 1px solid #dbdbdc;
     border-radius: 5px;
@@ -148,9 +144,6 @@
 .badge-size{
     display: inline;
     font-size: 15px;
-}
-.badge-size2{
-    margin-top: 2px;
 }
 .label-text{
   margin-top: 5px;
@@ -162,10 +155,6 @@
   margin-left:10px;
   margin-right:30px;
   color : #5f6368;
-}
-.column1{
-    display: flex;
-    flex-direction: column;
 }
 .buttons{
     display: flex;
@@ -183,30 +172,31 @@
     justify-content: flex-start;
     margin-top: 5px;
 }
-.start-left{
-    display: flex;
-    margin-left: 80px;
-}
-.top{
-   display: flex;
-   justify-content: flex-start;
-}
 .radiobutton{
     width: 25px;
     height:25px;
     margin: 6px 5px 10px 30px;
     
 }
-.input1{
-    margin-top: 4px;
+.content1{
+    display: flex;
+    width: 60%;
 }
+.content2{
+    display: flex;
+    width: 30%;
+}
+.top{
+   display: flex;
+   justify-content: flex-start;
+}
+
 .input2{
     margin :0 10px 2px 3px;
     
 }
 .input3{
-    margin-left: 5px;
-    width: 30%;
+    margin :0 10px 2px 3px;
 }
 .button1{
     display: flex;
