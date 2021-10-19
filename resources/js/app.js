@@ -23,6 +23,9 @@ Vue.component('aimtemplate-list', require('./components/pages/AimTemplateList.vu
 Vue.component('template-detail', require('./components/pages/TemplateDetail.vue').default);
 Vue.component('new-aimtemplate', require('./components/pages/NewAimTemplate').default);
 Vue.component('template-distribution', require('./components/pages/TemplateDistribution').default);
+Vue.component('period-edit', require('./components/pages/PeriodEdit').default);
+
+
 
 const app = new Vue({
     el: '#app',   

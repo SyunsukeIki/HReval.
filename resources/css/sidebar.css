@@ -55,6 +55,12 @@ ol li:nth-child(5) {
 
 }
 
+ol li:nth-child(6) {
+    border-left: solid 6px #75e2f0;
+    background: #f1f8ff;/*背景色*/
+
+}
+
 ol li:first-child:hover {
     color: #fff;
     border-left: solid 6px #fcc203;/*左側の線*/
@@ -76,6 +82,17 @@ ol li:nth-child(3):hover {
 
 ol li:nth-child(4):hover {
     border-left: solid 6px #fcc203;
+    background: #abb1b8;/*背景色*/
+
+}
+
+ol li:nth-child(5):hover {
+    border-left: solid 6px #f075e1;
+    background: #abb1b8;/*背景色*/
+
+}
+ol li:nth-child(5):hover {
+    border-left: solid 6px #75e2f0;
     background: #abb1b8;/*背景色*/
 
 }

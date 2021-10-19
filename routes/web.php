@@ -29,3 +29,7 @@ Route::view('/newaimtemplate', 'new-aimtemplate');
 
 Route::view('/templatedistribution', 'template-distribution');
 
+Route::view('/periodedit', 'period-edit');
+
+
+
