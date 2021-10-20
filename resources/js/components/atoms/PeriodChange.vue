@@ -13,7 +13,7 @@
                 <b-badge variant="info"><span class="badge-size">開始日</span></b-badge>
                 <b-input-group class="mb-3">
                   <b-form-input
-                    id="example-input"
+                    id="example-input1"
                     v-model="value_start"
                     type="text"
                     placeholder="YYYY-MM-DD"
@@ -21,11 +21,11 @@
                   ></b-form-input>
                   <b-input-group-append>
                     <b-form-datepicker
-                       v-model="value_start"
+                      v-model="value_start"
                       button-only
                       right
                       locale="en-US"
-                      aria-controls="example-input"
+                      aria-controls="example-input1"
                       @context="onContext"
                     ></b-form-datepicker>
                   </b-input-group-append>
@@ -35,7 +35,7 @@
                 <b-badge variant="info"><span class="badge-size">終了日</span></b-badge>
                 <b-input-group class="mb-3">
                   <b-form-input
-                    id="example-input"
+                    id="example-input2"
                     v-model="value_end"
                     type="text"
                     placeholder="YYYY-MM-DD"
@@ -47,7 +47,7 @@
                       button-only
                       right
                       locale="en-US"
-                      aria-controls="example-input"
+                      aria-controls="example-input2"
                       @context="onContext"
                     ></b-form-datepicker>
                   </b-input-group-append>

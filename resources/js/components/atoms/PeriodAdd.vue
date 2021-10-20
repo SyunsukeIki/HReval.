@@ -14,14 +14,14 @@
                 <b-input-group class="mb-3">
                   <b-form-input
                     id="example-input"
-                    v-model="value"
+                    v-model="value1"
                     type="text"
                     placeholder="YYYY-MM-DD"
                     autocomplete="off"
                   ></b-form-input>
                   <b-input-group-append>
                     <b-form-datepicker
-                      v-model="value"
+                      v-model="value1"
                       button-only
                       right
                       locale="en-US"
@@ -36,14 +36,14 @@
                 <b-input-group class="mb-3">
                   <b-form-input
                     id="example-input"
-                    v-model="value"
+                    v-model="value2"
                     type="text"
                     placeholder="YYYY-MM-DD"
                     autocomplete="off"
                   ></b-form-input>
                   <b-input-group-append>
                     <b-form-datepicker
-                      v-model="value"
+                      v-model="value2"
                       button-only
                       right
                       locale="en-US"
@@ -74,10 +74,8 @@
                 period: '上期',
                 start_date:'2021/04/01',
                 end_date:'2021/09/30',
-                value: '',
-                formatted: '',
-                selected: ''
-                
+                value1: '',
+                value2:'',
             }
 
         },
