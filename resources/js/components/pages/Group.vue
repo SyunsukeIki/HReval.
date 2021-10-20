@@ -6,14 +6,24 @@
                         <div>
                             <b-badge variant="info"><span class="badge-size">グループリスト</span></b-badge>
                             <div class="card1" style="width: 90%;">
-                                <b-badge href="#" :key="groupkind" v-for="groupkind in groupkinds" pill variant="success" class="badge-style"><span class="badge-size" >{{groupkind}}</span></b-badge>
+                                <b-form-checkbox  :key="groupkind" v-for="groupkind in groupkinds"
+                                id="checkbox-1"
+                                v-model="status"
+                                name="checkbox-1"
+                                :value="groupkind"
+                                unchecked-value=""
+                                button 
+                                button-variant="success"
+                                class="checkbox"
+                                >{{groupkind}}
+                                </b-form-checkbox>
                                 <button type="button" class="btn m-1 btn-primary btn-sm rounded-pill" @click="modeChange"><span>＋</span></button>
                             </div>
                         </div>
                         <div class="start" style="width:60%; margin: 40px 0 40px 0 ;">
                             <b-badge variant="info"><span class="badge-size">グループ名</span></b-badge>
                             <b-form-input v-if="addMode" v-model="text2" class="input2"></b-form-input>
-                            <b-form-input v-else v-model="text" class="input2"></b-form-input>
+                            <b-form-input v-else class="input2" :value="status"></b-form-input>
                         </div>
                         <div>
                             <div>
@@ -54,7 +64,7 @@
             return{  
                 selected:[],
                 addMode:false, 
-                text: 'システム事業部',
+                status:'',
                 text2:'',
                 groupkinds:["システム事業部②", "プログラマ②", "課長代理①","主任①","営業②","一般社員①","営業部②","山田チーム②","課長①","サッカー部①"],
                 employees:["阿部太郎","菅原道真","山田利信","川口沙也加","浜本剛"],
@@ -76,6 +86,9 @@
     flex-direction: column;
     align-items: flex-end;
 }
-
+.checkbox{
+    margin: 2px;
+    border-radius: 8px !important;
+}
 
 </style>
