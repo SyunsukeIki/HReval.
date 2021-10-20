@@ -9,14 +9,49 @@
                 <b-badge variant="info" ><span class="badge-size" style="margin-left: 14px; margin-right:14px;">期</span></b-badge>
                 <b-form-input  class="input" :value="period"></b-form-input>
             </div>
-            <div class="start" style="margin-bottom: 10px;">
+            <div class="start" style="margin-bottom: 10px; width:70%;">
                 <b-badge variant="info"><span class="badge-size">開始日</span></b-badge>
-                <b-form-input class="input" :value="start_date"></b-form-input>
+                <b-input-group class="mb-3">
+                  <b-form-input
+                    id="example-input"
+                    v-model="value_start"
+                    type="text"
+                    placeholder="YYYY-MM-DD"
+                    autocomplete="off"
+                  ></b-form-input>
+                  <b-input-group-append>
+                    <b-form-datepicker
+                       v-model="value_start"
+                      button-only
+                      right
+                      locale="en-US"
+                      aria-controls="example-input"
+                      @context="onContext"
+                    ></b-form-datepicker>
+                  </b-input-group-append>
+                </b-input-group>
             </div>
-            <div class="start" style="margin-bottom: 10px;">
+            <div class="start" style="margin-bottom: 10px; width:70%;">
                 <b-badge variant="info"><span class="badge-size">終了日</span></b-badge>
-                <b-form-input class="input" :value="end_date"></b-form-input>
-       
+                <b-input-group class="mb-3">
+                  <b-form-input
+                    id="example-input"
+                    v-model="value_end"
+                    type="text"
+                    placeholder="YYYY-MM-DD"
+                    autocomplete="off"
+                  ></b-form-input>
+                  <b-input-group-append>
+                    <b-form-datepicker
+                      v-model="value_end"
+                      button-only
+                      right
+                      locale="en-US"
+                      aria-controls="example-input"
+                      @context="onContext"
+                    ></b-form-datepicker>
+                  </b-input-group-append>
+                </b-input-group>      
             </div>
             <b-container class="bv-example-row">
                 <b-row align-h="end">
@@ -39,21 +74,11 @@
                 period: '上期',
                 start_date:'2021/04/01',
                 end_date:'2021/09/30',
-                value: '',
-                formatted: '',
-                selected: ''
-                
+                value_start: '2021/04/01',
+                value_end:'2021/09/30',           
             }
 
         },
-        methods: {
-          onContext(ctx) {
-            // The date formatted in the locale, or the `label-no-date-selected` string
-            this.formatted = ctx.selectedFormatted
-            // The following will be an empty string until a valid date is entered
-            this.selected = ctx.selectedYMD
-          }
-        }
     };
 </script>
 
