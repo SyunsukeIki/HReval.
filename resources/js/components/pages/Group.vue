@@ -15,7 +15,8 @@
                                 button 
                                 button-variant="success"
                                 class="checkbox"
-                                >{{groupkind}}
+                                >
+                                <span class="badge-size">{{groupkind}}</span>
                                 </b-form-checkbox>
                                 <button type="button" class="btn m-1 btn-primary btn-sm rounded-pill" @click="modeChange"><span>＋</span></button>
                             </div>
