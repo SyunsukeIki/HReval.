@@ -8,7 +8,8 @@
                     </div>                                        
                 </div>
                 <div class="item">
-                    <a class="link-primary" @click="selectAll" style="cursor: pointer;">絞り込み結果を全選択</a>
+                    <a v-if="allSelect" class="link-primary" @click="notSelectAll" style="cursor: pointer;">全選択を解除</a>
+                    <a v-else class="link-primary" @click="selectAll" style="cursor: pointer;">絞り込み結果を全選択</a>
                 </div>
                 <div class="list-sec">
                     <div class="sheetlist-table">
@@ -73,6 +74,9 @@
         methods: {
             selectAll: function(){
             this.allSelect = true
+            },
+            notSelectAll: function(){
+            this.allSelect = false
             },
         }
     };
