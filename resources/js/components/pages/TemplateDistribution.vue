@@ -27,7 +27,7 @@
                     </div>
                     <div class="list-sec">
                         <div class="sheetlist-table">
-                            <b-table :items="items" :fields="fields">
+                            <b-table sticky-header :items="items" :fields="fields">
                                 <template #cell(checkbox)>
                                     <div>
                                         <b-form-checkbox class="checkbox-size" size="lg"></b-form-checkbox>

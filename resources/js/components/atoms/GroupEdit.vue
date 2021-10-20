@@ -44,8 +44,6 @@
         components: {GroupAdd},
         props:{
             group_edit_modal_id:null,
-            memo_item:null,
-            memo_item_detail:null,
         },
         data() {
             return {

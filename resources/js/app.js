@@ -24,6 +24,7 @@ Vue.component('template-detail', require('./components/pages/TemplateDetail.vue'
 Vue.component('new-aimtemplate', require('./components/pages/NewAimTemplate').default);
 Vue.component('template-distribution', require('./components/pages/TemplateDistribution').default);
 Vue.component('period-edit', require('./components/pages/PeriodEdit').default);
+Vue.component('group', require('./components/pages/Group').default);
 
 
 

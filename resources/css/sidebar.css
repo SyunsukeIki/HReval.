@@ -60,6 +60,11 @@ ol li:nth-child(6) {
     background: #f1f8ff;/*背景色*/
 
 }
+ol li:nth-child(7) {
+    border-left: solid 6px #f07585;
+    background: #f1f8ff;/*背景色*/
+
+}
 
 ol li:first-child:hover {
     color: #fff;
@@ -91,8 +96,14 @@ ol li:nth-child(5):hover {
     background: #abb1b8;/*背景色*/
 
 }
-ol li:nth-child(5):hover {
+ol li:nth-child(6):hover {
     border-left: solid 6px #75e2f0;
+    background: #abb1b8;/*背景色*/
+
+}
+
+ol li:nth-child(7):hover {
+    border-left: solid 6px #f07585;
     background: #abb1b8;/*背景色*/
 
 }

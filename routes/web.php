@@ -31,5 +31,7 @@ Route::view('/templatedistribution', 'template-distribution');
 
 Route::view('/periodedit', 'period-edit');
 
+Route::view('/group', 'group');
+
 
 

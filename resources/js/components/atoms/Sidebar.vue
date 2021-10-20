@@ -9,6 +9,7 @@
           <li><a href="/userlist">ユーザー一覧</a></li>
           <li><a href="/aimtemplatelist">目標シートテンプレート一覧</a></li>
           <li><a href="/periodedit">評価期間設定</a></li>
+          <li><a href="/group">グループ編集</a></li>
         </ol>
       </div>
     </b-sidebar>
